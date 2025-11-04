@@ -112,8 +112,58 @@
         </main>
 
     <footer class="mt-32 border-t border-[var(--c-border)]">
-        <div class="max-w-7xl mx-auto px-6 lg:px-10 py-10">
-            <div class="text-center text-sm text-[var(--c-text-low)]">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 py-20">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12">
+                <div class="col-span-2 lg:col-span-2">
+                    <a href="#home" class="flex items-center gap-3 group">
+                        <svg class="h-9 w-9" viewBox="0 0 42 40" fill="none" aria-hidden="true">
+                            <path d="M21.5 12.5L10 19.25V32.75L21.5 26L33 19.25V5.75L21.5 12.5Z" stroke="var(--c-primary)" stroke-width="3"/>
+                            <path d="M10 19.25L21.5 26L33 19.25" stroke="#FFFFFF" stroke-width="3"/>
+                            <path d="M21.5 12.5V26" stroke="#FFFFFF" stroke-width="3"/>
+                        </svg>
+                        <span class="text-xl font-extrabold tracking-tight text-white">Bytewise</span>
+                    </a>
+                    <p class="mt-4 text-sm max-w-xs leading-relaxed">
+                        Engineering resilient data foundations and AI systems for mission-grade performance.
+                    </p>
+                    <p class="mt-6 text-xs text-[var(--c-text-low)]">
+                        <a href="#contact" class="hover:text-[var(--c-primary)] transition">Contact Sales</a> | <a href="#careers" class="hover:text-[var(--c-primary)] transition">Join Our Team</a>
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold tracking-wider uppercase text-white mb-4">Company</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a class="hover:text-white transition" href="#home">Home</a></li>
+                        <li><a class="hover:text-white transition" href="#about">About Us</a></li>
+                        <li><a class="hover:text-white transition" href="#careers">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold tracking-wider uppercase text-white mb-4">Resources</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a class="hover:text-white transition" href="#capabilities">Capabilities</a></li>
+                        <li><a class="hover:text-white transition" href="#approach">Our Approach</a></li>
+                        <li><a class="hover:text-white transition" href="#success-stories">Success Stories</a></li>
+                        <li><a class="hover:text-white transition" href="#insights">Insights & Research</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-span-2 md:col-span-1 lg:col-span-1">
+                    <h3 class="text-sm font-semibold tracking-wider uppercase text-white mb-4">Stay Informed</h3>
+                    <p class="text-sm mb-4">Subscribe for the latest in MLOps and Data Strategy.</p>
+                    <form id="newsletter-form" class="space-y-3" novalidate>
+                        <input id="newsletter-email" name="email" type="email" required placeholder="Work Email"
+                               class="w-full p-3 rounded-lg bg-black/25 border border-[var(--c-border)] text-sm text-white placeholder:text-[var(--c-text-low)] focus:outline-none focus:border-[var(--c-primary)] transition">
+                        <button type="submit" class="btn h-10 w-full text-sm" id="newsletterSubmit">Subscribe</button>
+                        <p id="newsletterStatus" class="text-xs text-[var(--c-text-low)] h-4"></p>
+                    </form>
+                </div>
+            </div>
+
+            <div class="mt-16 sep"></div>
+            <div class="mt-10 text-center text-sm text-[var(--c-text-low)]">
                 <p>&copy; 2025 Bytewise Limited. All rights reserved.</p>
             </div>
         </div>
