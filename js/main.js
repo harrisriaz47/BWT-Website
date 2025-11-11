@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
             'home': 'home.html',
             'about': 'about.html',
             'capabilities': 'capabilities.html',
+            'services': 'services.html',
+            'services2': 'Services2.html',
             'approach': 'approach.html',
             'success-stories': 'success-stories.html',
             'insights': 'insights.html',

@@ -1,0 +1,200 @@
+:root {
+    /* === CONSTANT (Brand) === */
+    --c-primary: #b02a37;
+    --c-secondary: #7a1c28;
+    --radii: 1.25rem;
+    
+    /* === LIGHT MODE (Default) === */
+    --c-bg: #F9FAFB; /* Light Gray (Cool) */
+    --c-surface: rgba(255, 255, 255, 0.5); /* Light Glass */
+    --c-border: #D1D5DB; /* Medium Gray Border */
+    --c-text-high: #111827; /* Near Black */
+    --c-text-mid: #374151; /* Dark Gray */
+    --c-text-low: #6B7280; /* Medium Gray */
+    --c-input-bg: #FFFFFF;
+    --c-card-bg: linear-gradient(145deg, rgba(255,255,255,0.8), rgba(255,255,255,0.5));
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* === DARK MODE === */
+        --c-bg: #000000;
+        --c-surface: rgba(10, 10, 10, 0.55); /* Dark Glass */
+        --c-border: rgba(255, 255, 255, 0.10); /* Light Border */
+        --c-text-high: #ffffff;
+        --c-text-mid: #a3a3a3;
+        --c-text-low: #6b6b6b;
+        --c-input-bg: rgba(0, 0, 0, 0.25);
+        --c-card-bg: linear-gradient(145deg, rgba(255,255,255,0.03), rgba(255,255,255,0.00));
+    }
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--c-bg);
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    color: var(--c-text-mid);
+    -webkit-font-smoothing: antialiased;
+    transition: background-color .3s ease, color .3s ease;
+}
+
+/* Only show aurora/gradient on dark mode */
+.aurora {
+    position: fixed; inset: 0; pointer-events: none; z-index: -1;
+    background:
+        radial-gradient(circle at 12% 25%, rgba(176,42,55,0.25), transparent 55%),
+        radial-gradient(circle at 85% 78%, rgba(122,28,40,0.30), transparent 60%);
+    filter: blur(120px) saturate(100%);
+    animation: drift 28s ease-in-out infinite alternate;
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        background: radial-gradient(circle at 15% 20%, #120709 0%, #000 50%) fixed;
+    }
+    .aurora {
+        opacity: 1;
+    }
+}
+
+
+.glass {
+    background: var(--c-surface);
+    backdrop-filter: blur(22px) saturate(140%);
+    -webkit-backdrop-filter: blur(22px) saturate(140%);
+    border: 1px solid var(--c-border);
+    transition: background-color .3s ease, border-color .3s ease;
+}
+
+.card {
+    position: relative;
+    background: var(--c-card-bg);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radii);
+    padding: 2rem;
+    transition: border-color .25s, box-shadow .35s, transform .35s, background-color .3s ease;
+}
+.card:hover {
+    border-color: var(--c-primary);
+    box-shadow: 0 0 0 1px rgba(176,42,55,0.35), 0 6px 30px -6px rgba(176,42,55,0.35);
+    transform: translateY(-4px);
+}
+
+.btn {
+    --btn-bg: var(--c-primary);
+    display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+    font-weight: 700; letter-spacing: .25px;
+    background: linear-gradient(135deg, var(--btn-bg), var(--c-secondary));
+    color: #fff; padding: .85rem 1.4rem;
+    border-radius: .85rem;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    transition: box-shadow .35s, transform .3s;
+}
+.btn::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.25), transparent 60%);
+    opacity: 0; transition: opacity .4s;
+}
+.btn:hover { box-shadow: 0 8px 28px -6px rgba(176,42,55,0.55); transform: translateY(-3px); }
+.btn:hover::after { opacity: 1; }
+
+.nav-link {
+    position: relative; font-weight: 600; color: var(--c-text-mid); padding: .25rem .5rem;
+    transition: color .25s;
+}
+.nav-link:focus-visible { outline: 2px solid var(--c-primary); outline-offset: 4px; border-radius: 6px; }
+.nav-link.active,
+.nav-link:hover { color: var(--c-primary); }
+.nav-link.active::after {
+    content: ""; position: absolute; left: 50%; bottom: -6px; width: 28px; height: 2px;
+    background: var(--c-primary); transform: translateX(-50%);
+}
+
+.hero-gradient {
+    background: linear-gradient(92deg, var(--c-text-high) 0%, var(--c-primary) 50%, var(--c-text-high) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shimmer 6s linear infinite;
+}
+@keyframes shimmer { to { background-position: 200% center; } }
+
+#main-content > section {
+    display: block;
+    animation: fadeIn .55s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+#mobile-menu { max-height: 0; overflow: hidden; transition: max-height .5s ease; }
+/* Utility overrides */
+.mono { font-family: 'JetBrains Mono', monospace; }
+/* Focus outline for all interactive */
+a, button, input { outline: none; }
+a:focus-visible, button:focus-visible, input:focus-visible {
+    box-shadow: 0 0 0 2px var(--c-primary);
+}
+/* Footer separator gradient */
+.sep {
+    background: linear-gradient(90deg, transparent, var(--c-border), transparent);
+    height: 1px; width: 100%;
+}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+    .hero-gradient, .aurora, .card:hover, .btn, .btn::after { animation: none !important; transition: none !important; }
+}
+
+/* --- Contact Modal Styles --- */
+.contact-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 50;
+    padding: 1rem;
+    animation: fadeIn .3s ease;
+}
+
+.contact-modal {
+    position: relative;
+    width: 100%;
+    max-width: 32rem; /* 512px */
+    margin: 4rem auto;
+    padding: 2.5rem;
+    border-radius: var(--radii);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 300;
+    color: var(--c-text-low);
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .2s;
+}
+.modal-close-btn:hover {
+    color: var(--c-text-high);
+    background: var(--c-border);
+    transform: scale(1.1);
+}
