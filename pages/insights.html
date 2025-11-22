@@ -1,42 +1,379 @@
-<section id="insights" class="py-24">
-    <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-4xl md:text-5xl font-bold text-white">Insights & Research</h2>
-        <p class="mt-4 text-lg text-[var(--c-text-mid)]">
-            Our analysis, research, and expert opinions on the future of data, analytics, and artificial intelligence.
+<section id="insights" class="py-24 space-y-20">
+    <!-- Hero -->
+    <div class="max-w-4xl mx-auto text-center">
+        <p class="section-label">INSIGHTS</p>
+        <h2 class="text-4xl md:text-5xl font-bold text-white">Technical Thinking on Data Engineering</h2>
+        <p class="mt-6 text-lg text-[var(--c-text-mid)]">
+            Frameworks, benchmarks, and decision models from real engagements. No fluff, no vendor marketing—just the kind of depth CTOs need.
         </p>
     </div>
-    
-    <div class="mt-16">
-        <div class="card grid md:grid-cols-2 gap-10 items-center">
-            <div>
-                <span class="mono text-xs tracking-wider text-[var(--c-primary)]">WHITE PAPER</span>
-                <h3 class="text-2xl lg:text-3xl font-bold text-white mt-3 mb-4">The GenAI Shift: From Pilot to Production</h3>
-                <p class="leading-relaxed mb-6">Enterprises are moving beyond the chatbot. We explore the MLOps, governance, and data-privacy frameworks required to deploy generative AI securely and at scale.</p>
-                <a href="#contact" class="btn text-sm">Download The Report →</a>
-            </div>
-            <div class="hidden md:block">
-                <div class="bg-black/20 border border-[var(--c-border)] rounded-xl aspect-video flex items-center justify-center">
-                    <p class="text-[var(--c-text-low)]">Report Graphic</p>
+
+    <!-- Featured Articles -->
+    <div class="space-y-16">
+        <!-- Article 1: Lakehouse vs Warehouse -->
+        <div class="card card--elevated p-10">
+            <div class="flex items-start justify-between">
+                <div class="flex-1">
+                    <span class="badge badge--primary">ARCHITECTURE</span>
+                    <h3 class="text-3xl font-bold text-white mt-4">Lakehouse vs. Warehouse: A Decision Framework for CTOs</h3>
+                    <p class="mt-3 text-[var(--c-text-mid)]">When Databricks/Snowflake consultants tell you "one size fits all," here's the real calculus. 8-minute read.</p>
+                    <p class="mono text-xs text-[var(--c-text-low)] mt-4">PUBLISHED MAY 2024 · BY BYTEWISE ENGINEERING</p>
                 </div>
+            </div>
+
+            <div class="mt-8 space-y-6 text-[var(--c-text-mid)]">
+                <p class="text-lg">
+                    <strong class="text-white">The question every data leader faces:</strong> Do we standardize on a cloud warehouse (Snowflake, BigQuery, Redshift) or bet on the lakehouse pattern (Databricks, Dremio, Starburst)?
+                </p>
+
+                <p>
+                    After designing 15+ data platforms in the last 3 years, here's the uncomfortable truth: <strong class="text-white">there's no universal answer</strong>. But there *is* a systematic way to evaluate based on your org's profile.
+                </p>
+
+                <h4 class="text-2xl font-bold text-white mt-8">Start With Workload Composition</h4>
+                
+                <div class="code-block">
+                    <code class="text-xs">decision_tree:
+  if: structured_only AND low_data_science_maturity
+    → Warehouse (easier operationally)
+  
+  elif: heavy_ML_workloads OR unstructured_data >30%
+    → Lakehouse (cost + flexibility win)
+  
+  elif: sub-second_latency_required
+    → Hybrid (warehouse + streaming layer)
+  
+  else: evaluate_on_4_dimensions below...</code>
+                </div>
+
+                <h5 class="text-xl font-bold text-white mt-6">Dimension 1: Data Science Velocity</h5>
+                <p>
+                    If your DS team ships models weekly: <strong class="text-white">Lakehouse has 3-5x faster iteration.</strong> Why? Direct access to raw data, no ETL dependencies, native Python/Spark. We've seen model training cut from 2 weeks to 3 days switching from Redshift → Databricks.
+                </p>
+                <p class="mt-3">
+                    But if you're BI-heavy (80%+ SQL analysts, rare ML): <strong class="text-white">Warehouse simplicity wins.</strong> No Spark cluster tuning, no schema evolution headaches.
+                </p>
+
+                <h5 class="text-xl font-bold text-white mt-6">Dimension 2: Query Patterns</h5>
+                <div class="mt-3 space-y-3">
+                    <div class="decision-node">
+                        <strong>Warehouse edge case:</strong> If 90% of queries hit the same 10 tables with sub-second SLAs → Snowflake's result cache is magic. Lakehouse can't compete here without adding Trino/Presto + result caching layer.
+                    </div>
+                    <div class="decision-node">
+                        <strong>Lakehouse edge case:</strong> Full-table scans on 100GB+ datasets happening hourly → Delta/Iceberg with Z-ordering crushes warehouse costs. We've seen 60% compute savings vs. Snowflake for exploratory workloads.
+                    </div>
+                </div>
+
+                <h5 class="text-xl font-bold text-white mt-6">Dimension 3: Governance Maturity</h5>
+                <p>
+                    Hard truth: <strong class="text-white">Lakehouse demands more governance discipline.</strong> No warehouse-style access controls out of the box. You need Unity Catalog (Databricks) or Ranger (open-source) configured correctly.
+                </p>
+                <p class="mt-3">
+                    If you can't commit to: (1) data classification, (2) RBAC setup, (3) lineage tooling → <strong class="text-white">warehouse is safer.</strong> Snowflake's RBAC just works. Lakehouse requires investment.
+                </p>
+
+                <h5 class="text-xl font-bold text-white mt-6">Dimension 4: Cost Predictability</h5>
+                <div class="mt-3 p-6 bg-[var(--c-surface)] border border-[var(--c-border)] rounded">
+                    <p class="mono text-xs text-[var(--c-primary)] mb-3">COST REALITY CHECK</p>
+                    <p class="text-sm">
+                        <strong class="text-white">Warehouse:</strong> $5-15K/TB/year all-in (compute + storage). Predictable but scales linearly.<br>
+                        <strong class="text-white">Lakehouse:</strong> $1-3K/TB/year optimized. But optimization requires Spark expertise. Un-optimized lakehouse can cost 2x warehouse.
+                    </p>
+                </div>
+
+                <h4 class="text-2xl font-bold text-white mt-8">The Hybrid Pattern (What We Actually Build)</h4>
+                <p>
+                    Most mature orgs don't pick one. They run: <strong class="text-white">Lakehouse for raw + ML + exploratory</strong> → <strong class="text-white">Warehouse for curated + BI + operational dashboards</strong>.
+                </p>
+
+                <div class="code-block mt-4">
+                    <code class="text-xs">hybrid_architecture:
+  bronze/silver layers: Delta Lake on S3
+    → cost-optimized storage
+    → ML feature engineering
+    → data science sandbox
+  
+  gold layer: Snowflake (dbt transforms)
+    → business-critical dashboards
+    → sub-second query SLAs
+    → centralized governance
+  
+  sync: Databricks → Snowflake via Delta Sharing (hourly)</code>
+                </div>
+
+                <p class="mt-6">
+                    Tradeoff: Operational complexity goes up (2 systems to maintain). But for orgs with $500K+ annual data spend, the flexibility + cost savings justify it.
+                </p>
+
+                <h4 class="text-2xl font-bold text-white mt-8">Red Flags We've Seen</h4>
+                <ul class="mt-4 space-y-2 list-disc list-inside">
+                    <li><strong class="text-white">Migrating to lakehouse to "save money" without Spark expertise</strong> → ends up 1.5x more expensive</li>
+                    <li><strong class="text-white">Choosing warehouse because "we're not data science-first yet"</strong> → locks you in, migration costs $500K+ later</li>
+                    <li><strong class="text-white">Vendor telling you their platform does everything</strong> → they're selling, not engineering</li>
+                </ul>
+
+                <h4 class="text-2xl font-bold text-white mt-8">Our Recommendation Process</h4>
+                <p>When we scope architecture engagements, we run:</p>
+                <ol class="mt-3 space-y-2 list-decimal list-inside">
+                    <li>Workload profiling (SQL vs. Spark, query patterns, data volumes)</li>
+                    <li>Team skills assessment (SQL analysts vs. data engineers vs. ML engineers)</li>
+                    <li>Cost modeling (3-year TCO for warehouse vs. lakehouse vs. hybrid)</li>
+                    <li>Governance requirements (GDPR, HIPAA, SOC2, data residency)</li>
+                </ol>
+
+                <p class="mt-6">
+                    <strong class="text-white">Bottom line:</strong> If you're a $50M+ revenue company evaluating platforms, don't rely on vendor demos. Run a 4-week proof-of-concept with real workloads. We help CTOs do this without committing to 3-year contracts.
+                </p>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-[var(--c-border)] flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <span class="mono text-xs text-[var(--c-text-low)]">SHARE:</span>
+                    <a href="#" class="text-sm text-[var(--c-primary)] hover:underline">LinkedIn</a>
+                    <a href="#" class="text-sm text-[var(--c-primary)] hover:underline">Twitter</a>
+                </div>
+                <a href="#contact" class="text-sm text-[var(--c-primary)] hover:underline">Discuss your architecture →</a>
+            </div>
+        </div>
+
+        <!-- Article 2: Real Cost of Cloud Data -->
+        <div class="card card--elevated p-10">
+            <div>
+                <span class="badge badge--secondary">COST OPTIMIZATION</span>
+                <h3 class="text-3xl font-bold text-white mt-4">The Real Cost of Cloud Data Platforms (And Where to Cut)</h3>
+                <p class="mt-3 text-[var(--c-text-mid)]">Your Snowflake/Databricks bill is 40% higher than it should be. Here's the diagnostic we run. 6-minute read.</p>
+                <p class="mono text-xs text-[var(--c-text-low)] mt-4">PUBLISHED APRIL 2024 · BY BYTEWISE ENGINEERING</p>
+            </div>
+
+            <div class="mt-8 space-y-6 text-[var(--c-text-mid)]">
+                <p class="text-lg">
+                    Last quarter we audited 8 data platforms with $200K-$2M annual cloud spend. <strong class="text-white">Every single one had 30-50% waste.</strong> Not because teams are incompetent—because vendors optimize for revenue, not your costs.
+                </p>
+
+                <h4 class="text-2xl font-bold text-white mt-8">The 5 Cost Leaks We Find (In Order of Impact)</h4>
+
+                <h5 class="text-xl font-bold text-white mt-6">1. Unoptimized Storage (30-40% of waste)</h5>
+                <div class="decision-node mt-3">
+                    <strong>Symptom:</strong> Snowflake storage costs growing 20%/month. Time-travel retention set to 90 days on all tables (default). Thousands of abandoned dev tables.
+                </div>
+                <div class="decision-node mt-3">
+                    <strong>Fix:</strong> 7-day retention for non-critical tables. Automated cleanup (drop tables unused >60 days). Compress with ZSTD before loading. Savings: $40K/year typical.
+                </div>
+
+                <h5 class="text-xl font-bold text-white mt-6">2. Oversized Warehouses (25-35% of waste)</h5>
+                <p class="mt-3">
+                    <strong class="text-white">Classic mistake:</strong> Data team spins up XL warehouse for dev work, never shuts it down. We've seen $15K/month burning on idle warehouses.
+                </p>
+                <div class="code-block mt-3">
+                    <code class="text-xs">warehouse_rightsizing:
+  dev/test: auto-suspend after 1min, XS size
+  production ETL: dynamic sizing based on data volume
+  BI queries: serverless compute (Snowflake) OR auto-scaling cluster (Databricks)
+  
+savings: 40-60% compute costs</code>
+                </div>
+
+                <h5 class="text-xl font-bold text-white mt-6">3. Inefficient Query Patterns (15-25% of waste)</h5>
+                <p class="mt-3">
+                    Dashboards running full-table scans every 5 minutes. No materialized views. No partition pruning. Result: burning credits on repeated work.
+                </p>
+                <div class="decision-node mt-3">
+                    <strong>Solution:</strong> Query profiling (EXPLAIN plans), materialized views for hot paths, incremental dbt models, partition keys on date columns.
+                </div>
+
+                <h5 class="text-xl font-bold text-white mt-6">4. Data Transfer Costs (10-15% of waste)</h5>
+                <p class="mt-3">
+                    Cross-region replication you don't need. Egress charges from cloud storage. AWS S3 → Snowflake transfers not using PrivateLink.
+                </p>
+
+                <h5 class="text-xl font-bold text-white mt-6">5. Unused Features You're Paying For (5-10% of waste)</h5>
+                <p class="mt-3">
+                    Enterprise tier for Snowflake when Standard tier would suffice. Databricks Delta Live Tables license unused. Data quality tools overlapping with dbt tests.
+                </p>
+
+                <h4 class="text-2xl font-bold text-white mt-8">Our Cost Audit Process</h4>
+                <p>We deliver this in 2 weeks:</p>
+                <ol class="mt-3 space-y-2 list-decimal list-inside text-sm">
+                    <li>Cost breakdown analysis (storage, compute, transfer, licensing)</li>
+                    <li>Query performance profiling (top 20 expensive queries)</li>
+                    <li>Warehouse utilization report (idle time, right-sizing recommendations)</li>
+                    <li>3-month optimization roadmap (quick wins → deep refactors)</li>
+                    <li>Projected savings (conservative, validated by historical data)</li>
+                </ol>
+
+                <div class="mt-6 p-6 bg-[var(--c-surface)] border-l-4 border-[var(--c-secondary)] rounded">
+                    <p class="font-bold text-white">Typical ROI: $120K saved annually on $400K spend (30% reduction).</p>
+                    <p class="mt-2 text-sm">Audit fee: $15K. Payback in 6 weeks.</p>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-[var(--c-border)]">
+                <a href="#contact" class="text-sm text-[var(--c-primary)] hover:underline">Request a cost audit →</a>
+            </div>
+        </div>
+
+        <!-- Article 3: Build vs Buy -->
+        <div class="card card--elevated p-10">
+            <div>
+                <span class="badge badge--outline">STRATEGY</span>
+                <h3 class="text-3xl font-bold text-white mt-4">Build vs. Buy for Data Teams: A 2024 Update</h3>
+                <p class="mt-3 text-[var(--c-text-mid)]">When to invest in custom data infrastructure vs. buying managed services. Spoiler: it's changed since 2020. 10-minute read.</p>
+                <p class="mono text-xs text-[var(--c-text-low)] mt-4">PUBLISHED MARCH 2024 · BY BYTEWISE ENGINEERING</p>
+            </div>
+
+            <div class="mt-8 space-y-6 text-[var(--c-text-mid)]">
+                <p class="text-lg">
+                    The calculus has shifted. <strong class="text-white">Open-source data tools are good enough</strong> (dbt, Airbyte, Great Expectations). Managed services are expensive but reliable. Custom builds are risky but differentiate.
+                </p>
+
+                <p>Here's how we advise CTOs in 2024:</p>
+
+                <h4 class="text-2xl font-bold text-white mt-8">Always Buy (Don't Build)</h4>
+                <ul class="mt-3 space-y-2 list-disc list-inside">
+                    <li><strong class="text-white">Cloud warehouse/lakehouse:</strong> Snowflake/Databricks. Building distributed query engines is not your moat.</li>
+                    <li><strong class="text-white">Data catalog:</strong> Atlan, Alation, or open-source DataHub. Too much UI/integration work.</li>
+                    <li><strong class="text-white">Observability:</strong> Monte Carlo, Datadog. Monitoring infrastructure is commodity.</li>
+                    <li><strong class="text-white">Auth/SSO:</strong> Okta, Auth0. Security is non-negotiable, don't DIY.</li>
+                </ul>
+
+                <h4 class="text-2xl font-bold text-white mt-8">Consider Building (Hybrid Approach)</h4>
+                <ul class="mt-3 space-y-2 list-disc list-inside">
+                    <li><strong class="text-white">Feature stores:</strong> Managed (SageMaker Feature Store, Tecton) lock you in. Open-source Feast + your infra = flexibility.</li>
+                    <li><strong class="text-white">Orchestration:</strong> Airflow (managed on Astronomer) OR custom Dagster if complex dependencies.</li>
+                    <li><strong class="text-white">Reverse ETL:</strong> Hightouch/Census are pricey. If < 10 destinations, build with dbt + scripts.</li>
+                </ul>
+
+                <h4 class="text-2xl font-bold text-white mt-8">Build Only If Strategic Differentiator</h4>
+                <ul class="mt-3 space-y-2 list-disc list-inside">
+                    <li><strong class="text-white">Real-time ML inference:</strong> If latency <10ms required, custom serving layer justified.</li>
+                    <li><strong class="text-white">Novel data processing:</strong> Proprietary algorithms, competitive advantage workflows.</li>
+                    <li><strong class="text-white">Extreme scale:</strong> If processing >10PB/day, custom infra pays off (see Uber, Netflix).</li>
+                </ul>
+
+                <div class="mt-8 code-block">
+                    <code class="text-xs">decision_framework:
+  if: commodity_capability AND vendor_mature
+    → Buy (focus engineering time elsewhere)
+  
+  elif: strategic_differentiation OR vendor_lock-in_risk_high
+    → Build (with open-source foundation)
+  
+  elif: uncertain_requirements OR early_stage
+    → Buy now, build later (defer custom work)</code>
+                </div>
+
+                <h4 class="text-2xl font-bold text-white mt-8">What We're Seeing in 2024</h4>
+                <p>
+                    <strong class="text-white">Trend 1:</strong> Teams buying less, stitching open-source more. Why? Economic pressure + mature OSS (dbt, Airbyte, Dagster all production-ready).
+                </p>
+                <p class="mt-3">
+                    <strong class="text-white">Trend 2:</strong> "Managed open-source" winning. Example: Astronomer (managed Airflow), Aiven (managed Kafka). You get flexibility + reliability.
+                </p>
+                <p class="mt-3">
+                    <strong class="text-white">Trend 3:</strong> GenAI forcing rethinking. LLM feature stores, vector databases, prompt management—no clear winners yet. Early adopters building custom.
+                </p>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-[var(--c-border)]">
+                <a href="#contact" class="text-sm text-[var(--c-primary)] hover:underline">Discuss your stack decisions →</a>
             </div>
         </div>
     </div>
 
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-16">
-        <div class="card">
-            <span class="mono text-xs tracking-wider text-[var(--c-primary)]">ARTICLE</span>
-            <h3 class="text-xl font-bold text-white mt-3">Rethinking Real-Time: When is "Streaming" Overkill?</h3>
-            <p class="mt-3 text-sm leading-relaxed">A pragmatic look at the cost-benefit analysis of real-time streaming vs. micro-batch architectures for modern analytics.</p>
+    <!-- Resource Library -->
+    <div class="space-y-8">
+        <div class="text-center">
+            <p class="section-label">RESOURCE LIBRARY</p>
+            <h3 class="text-3xl font-bold text-white mt-4">Quick Reads & References</h3>
         </div>
-        <div class="card">
-            <span class="mono text-xs tracking-wider text-[var(--c-primary)]">ARTICLE</span>
-            <h3 class="text-xl font-bold text-white mt-3">Data Mesh in Practice: A Cultural & Technical Guide</h3>
-            <p class="mt-3 text-sm leading-relaxed">Data mesh is more than a technology; it's a fundamental shift in organizational thinking. We detail the path to adoption.</p>
+
+        <div class="grid-3">
+            <div class="card">
+                <span class="mono text-xs text-[var(--c-primary)]">CHECKLIST</span>
+                <h4 class="text-lg font-bold text-white mt-3">Data Platform RFP Template</h4>
+                <p class="mt-2 text-sm text-[var(--c-text-mid)]">40-question template for evaluating vendors. What to ask Snowflake/Databricks/BigQuery.</p>
+                <a href="#contact" class="text-sm text-[var(--c-primary)] hover:underline mt-4 inline-block">Download PDF →</a>
+            </div>
+
+            <div class="card">
+                <span class="mono text-xs text-[var(--c-primary)]">BENCHMARK</span>
+                <h4 class="text-lg font-bold text-white mt-3">Data Team Sizing Guide</h4>
+                <p class="mt-2 text-sm text-[var(--c-text-mid)]">Headcount ratios by company stage. When to hire data engineers vs. analytics engineers.</p>
+                <a href="#contact" class="text-sm text-[var(--c-primary)] hover:underline mt-4 inline-block">Request access →</a>
+            </div>
+
+            <div class="card">
+                <span class="mono text-xs text-[var(--c-primary)]">FRAMEWORK</span>
+                <h4 class="text-lg font-bold text-white mt-3">ML Maturity Assessment</h4>
+                <p class="mt-2 text-sm text-[var(--c-text-mid)]">Self-assessment scorecard (20 questions). Where does your ML capability stand?</p>
+                <a href="#contact" class="text-sm text-[var(--c-primary)] hover:underline mt-4 inline-block">Take assessment →</a>
+            </div>
         </div>
-        <div class="card">
-            <span class="mono text-xs tracking-wider text-[var(--c-primary)]">CASE STUDY</span>
-            <h3 class="text-xl font-bold text-white mt-3">Anomoly Detection for High-Frequency Trading</h3>
-            <p class="mt-3 text-sm leading-relaxed">How we built a sub-10ms anomaly detection model that processes over 1M events per second.</p>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="glass p-10">
+        <div class="max-w-2xl mx-auto text-center">
+            <h3 class="text-2xl font-bold text-white">Engineering Insights Monthly</h3>
+            <p class="mt-3 text-[var(--c-text-mid)]">
+                One deep-dive article per month on data platform architecture. No product pitches, no lead-gen spam. Unsubscribe anytime.
+            </p>
+            <form class="mt-6 flex gap-3">
+                <input 
+                    type="email" 
+                    placeholder="your@company.com" 
+                    class="flex-1 px-4 py-3 bg-[var(--c-surface)] border border-[var(--c-border)] rounded text-white placeholder-[var(--c-text-low)] focus:outline-none focus:border-[var(--c-primary)]"
+                >
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+            <p class="mt-3 text-xs text-[var(--c-text-low)]">1,200+ data leaders subscribed. Avg open rate: 42%.</p>
         </div>
+    </div>
+
+    <!-- Speaking & Content -->
+    <div class="space-y-8">
+        <div class="text-center">
+            <p class="section-label">SPEAKING & THOUGHT LEADERSHIP</p>
+            <h3 class="text-3xl font-bold text-white mt-4">Where We're Contributing</h3>
+        </div>
+
+        <div class="grid-2 gap-6">
+            <div class="card">
+                <p class="mono text-xs text-[var(--c-primary)]">CONFERENCE TALK</p>
+                <h4 class="text-xl font-bold text-white mt-3">Data Council NYC 2024</h4>
+                <p class="mt-3 text-sm text-[var(--c-text-mid)]">"Feature Store Anti-Patterns: What We Learned Building 6 Production Systems"</p>
+                <a href="#" class="text-sm text-[var(--c-primary)] hover:underline mt-4 inline-block">Watch recording →</a>
+            </div>
+
+            <div class="card">
+                <p class="mono text-xs text-[var(--c-primary)]">PODCAST</p>
+                <h4 class="text-xl font-bold text-white mt-3">Data Engineering Podcast</h4>
+                <p class="mt-3 text-sm text-[var(--c-text-mid)]">Episode 287: "When to Choose Lakehouse Over Warehouse" (45min)</p>
+                <a href="#" class="text-sm text-[var(--c-primary)] hover:underline mt-4 inline-block">Listen →</a>
+            </div>
+
+            <div class="card">
+                <p class="mono text-xs text-[var(--c-primary)]">OPEN SOURCE</p>
+                <h4 class="text-xl font-bold text-white mt-3">dbt Package: dq-checks</h4>
+                <p class="mt-3 text-sm text-[var(--c-text-mid)]">Data quality testing framework we built for clients. Now open-sourced. 400+ GitHub stars.</p>
+                <a href="#" class="text-sm text-[var(--c-primary)] hover:underline mt-4 inline-block">View on GitHub →</a>
+            </div>
+
+            <div class="card">
+                <p class="mono text-xs text-[var(--c-primary)]">GUEST POST</p>
+                <h4 class="text-xl font-bold text-white mt-3">Databricks Engineering Blog</h4>
+                <p class="mt-3 text-sm text-[var(--c-text-mid)]">"Scaling Delta Lake for 10PB Workloads: Lessons from Production"</p>
+                <a href="#" class="text-sm text-[var(--c-primary)] hover:underline mt-4 inline-block">Read article →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center">
+        <h3 class="text-3xl font-bold text-white">Have a Technical Question?</h3>
+        <p class="mt-4 text-[var(--c-text-mid)] max-w-2xl mx-auto">
+            We offer 30-minute technical consultations for data leaders wrestling with architecture decisions. No sales pitch.
+        </p>
+        <a href="#contact" class="btn mt-8">Schedule a Call</a>
     </div>
 </section>

@@ -1,35 +1,74 @@
-<section id="careers" class="py-24">
+<section id="engage" class="py-24 space-y-16">
     <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-4xl md:text-5xl font-bold text-white">Build What Moves Industries</h2>
-        <p class="mt-4 text-lg text-[var(--c-text-mid)]">
-            We hire people obsessed with clarity, scale, and elegant systems. If you like solving what others defer—let’s talk.
-        </p>
+        <p class="section-label">ENGAGE</p>
+        <h2 class="text-4xl md:text-5xl font-bold text-white">Choose The Engagement Style That Fits</h2>
+        <p class="mt-4 text-lg text-[var(--c-text-mid)]">Flexible models for strategic initiatives, in-flight programs, or sustained managed services.</p>
     </div>
-    <div class="mt-16 max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
-        <div class="card">
-            <h3 class="text-2xl font-bold text-white">Culture</h3>
-            <p class="mt-4">High trust. High craftsmanship. Low ego. We favor deep work, peer review, and continuous refinement over ceremony.</p>
+
+    <div class="engagement-table">
+        <div class="engagement-col">
+            <p class="badge">Advisory</p>
+            <h3>Executive Partner</h3>
+            <p>Fractional CDO/CDAO support, investment cases, vendor diligence.</p>
+            <ul>
+                <li>Kickoff scheduled as soon as sponsors are aligned</li>
+                <li>Flexible advisory hours matched to your workload</li>
+                <li>Roadmaps, board decks, KPIs</li>
+            </ul>
+            <p class="mono text-xs text-[var(--c-text-low)]">Ideal for: strategy resets</p>
         </div>
-        <div class="card">
-            <h3 class="text-2xl font-bold text-white">Environment</h3>
-            <p class="mt-4">Competitive compensation, flexible remote model, advanced tooling budget, and continuous learning allocation.</p>
+        <div class="engagement-col highlighted">
+            <p class="badge">Embedded Pod</p>
+            <h3>Outcome Team</h3>
+            <p>Cross-functional pod (solutions architect + engineers + analyst) owning delivery with SLAs.</p>
+            <ul>
+                <li>Launch once access, tooling, and scope are ready</li>
+                <li>Mission length adapts to your backlog</li>
+                <li>Regular demos · exec scorecards</li>
+            </ul>
+            <p class="mono text-xs text-[var(--c-text-low)]">Ideal for: modernization, AI launch</p>
+        </div>
+        <div class="engagement-col">
+            <p class="badge">Managed</p>
+            <h3>DataOps Command</h3>
+            <p>24/7 operations, reliability engineering, and continuous optimization.</p>
+            <ul>
+                <li>Onboards after joint runbook + escalation reviews</li>
+                <li>Rolling multi-month terms</li>
+                <li>Periodic optimization reviews</li>
+            </ul>
+            <p class="mono text-xs text-[var(--c-text-low)]">Ideal for: mission-critical stacks</p>
         </div>
     </div>
-    <div class="mt-14">
-        <h3 class="text-2xl font-bold text-white text-center mb-8">Open Roles</h3>
-        <div class="max-w-2xl mx-auto space-y-4">
-            <div class="card flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <h4 class="font-semibold text-white">Senior Data Engineer (Remote)</h4>
-                <a href="#contact" class="btn text-xs">Apply →</a>
-            </div>
-            <div class="card flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <h4 class="font-semibold text-white">Machine Learning Scientist</h4>
-                <a href="#contact" class="btn text-xs">Apply →</a>
-            </div>
-            <div class="card flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <h4 class="font-semibold text-white">Lead Solutions Architect</h4>
-                <a href="#contact" class="btn text-xs">Apply →</a>
-            </div>
+
+    <div class="card contact-intro">
+        <div>
+            <h3 class="text-3xl font-bold text-white">Ready to scope your initiative?</h3>
+            <p class="mt-3 text-[var(--c-text-mid)]">Tell us about your timeline, budget guardrails, and success metrics. We respond inside one business day.</p>
         </div>
+        <form id="engage-form" class="magnet-form" novalidate>
+            <input type="text" name="company" placeholder="Company" required>
+            <select name="initiative" required>
+                <option value="" disabled selected>Initiative Type</option>
+                <option>Platform Modernization</option>
+                <option>Applied AI / MLOps</option>
+                <option>Analytics / BI</option>
+                <option>Managed Ops</option>
+            </select>
+            <select name="timeline" required>
+                <option value="" disabled selected>Urgency</option>
+                <option>Need help immediately</option>
+                <option>Near-term (approvals in motion)</option>
+                <option>Planning phase (scoping underway)</option>
+                <option>Exploratory / early research</option>
+            </select>
+            <button type="submit" class="btn" id="engageSubmit">Request A Call</button>
+            <p id="engageStatus" class="form-status" aria-live="polite"></p>
+        </form>
     </div>
+
+    <div class="talent-note">
+        <p>Looking to join the Bytewise team? <a href="#contact" class="link-underline">Introduce yourself →</a></p>
+    </div>
+
 </section>

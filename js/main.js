@@ -7,26 +7,29 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadPage(pageId) {
         // Map hash fragments to file names
         const pageMap = {
-            'home': 'home.html',
-            'about': 'about.html',
-            'capabilities': 'capabilities.html',
-            'services': 'services.html',
-            'services2': 'Services2.html',
-            'approach': 'approach.html',
-            'success-stories': 'success-stories.html',
-            'insights': 'insights.html',
-            'careers': 'careers.html'
+            overview: 'home',
+            home: 'home',
+            about: 'about',
+            approach: 'approach',
+            services: 'services',
+            capabilities: 'capabilities',
+            work: 'work',
+            'success-stories': 'work',
+            insights: 'insights',
+            careers: 'careers',
+            contact: 'contact'
         };
-
+        
         const pageFile = pageMap[pageId] || pageMap['home'];
         const validPageId = Object.keys(pageMap).find(key => pageMap[key] === pageFile) || 'home';
 
         try {
-            const response = await fetch(`pages/${pageFile}`);
+            const response = await fetch(`pages/${pageFile}.html`);
             if (!response.ok) throw new Error('Page not found');
             const content = await response.text();
             
-            mainContent.innerHTML = content;
+              mainContent.innerHTML = content;
+              enhanceDynamicContent();
             if (window.location.hash !== '#contact') {
                  window.scrollTo({ top: 0, behavior: 'instant' });
             }
@@ -76,6 +79,76 @@ document.addEventListener('DOMContentLoaded', () => {
             menuBtn.setAttribute('aria-expanded', 'false');
         }
     });
+
+    // --- Dynamic content enhancers (forms, anchor helpers) ---
+    function enhanceDynamicContent() {
+        wireMockForm('asset-download-form', 'assetSubmit', 'assetStatus', 'Checklist is on its way.');
+        wireMockForm('insight-form', 'insightSubmit', 'insightStatus', 'Report sent to your inbox.');
+        wireMockForm('insights-newsletter-form', 'insightsNewsletterSubmit', 'insightsNewsletterStatus', 'Subscribed. Welcome to the Signal.');
+        wireMockForm('engage-form', 'engageSubmit', 'engageStatus', 'We will reach out within 1 business day.');
+        wireMockForm('qualified-contact-form', 'qualifiedContactSubmit', 'qualifiedContactStatus', 'We received your inquiry. A specialist will respond shortly.');
+        focusAssetButtons();
+    }
+
+
+    function wireMockForm(formId, submitId, statusId, successCopy) {
+        const form = document.getElementById(formId);
+        if (!form) return;
+        const submitBtn = submitId ? document.getElementById(submitId) : form.querySelector('button[type="submit"]');
+        const statusEl = statusId ? document.getElementById(statusId) : form.querySelector('.form-status');
+
+        form.addEventListener('submit', event => {
+            event.preventDefault();
+            if (!form.reportValidity()) return;
+
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+            }
+            if (statusEl) statusEl.textContent = '';
+
+            setTimeout(() => {
+                if (submitBtn) {
+                    submitBtn.textContent = 'Sent ✓';
+                }
+                if (statusEl) {
+                    statusEl.textContent = successCopy || 'Thanks!';
+                }
+
+                setTimeout(() => {
+                    form.reset();
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = submitBtn.dataset.defaultLabel || 'Submit';
+                    }
+                    if (statusEl) statusEl.textContent = '';
+                }, 1600);
+            }, 1200);
+        });
+
+        if (submitBtn && !submitBtn.dataset.defaultLabel) {
+            submitBtn.dataset.defaultLabel = submitBtn.textContent;
+        }
+    }
+
+    function focusAssetButtons() {
+        const buttons = document.querySelectorAll('[data-open-asset]');
+        if (!buttons.length) return;
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const form = document.getElementById('asset-download-form');
+                if (form) {
+                    form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    const firstInput = form.querySelector('input');
+                    if (firstInput) {
+                        setTimeout(() => firstInput.focus({ preventScroll: true }), 400);
+                    }
+                } else {
+                    window.location.hash = '#home';
+                }
+            });
+        });
+    }
 
     // --- NEW: Contact Modal Logic ---
     const contactOverlay = document.getElementById('contact-overlay');

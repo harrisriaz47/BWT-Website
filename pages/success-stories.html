@@ -1,52 +1,140 @@
-<section id="success" class="py-24">
+<section id="proof" class="py-24 space-y-16">
     <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-4xl md:text-5xl font-bold text-white">Case Outcomes</h2>
-        <p class="mt-4 text-lg text-[var(--c-text-mid)]">Impact from production deployments in regulated, data-intensive environments.</p>
+        <p class="section-label">PROOF</p>
+        <h2 class="text-4xl md:text-5xl font-bold text-white">Outcomes In Regulated, High-Stakes Environments</h2>
+        <p class="mt-4 text-lg text-[var(--c-text-mid)]">We partner with risk-conscious teams to deliver measurable impact while satisfying compliance, security, and executive oversight.</p>
     </div>
-    <div class="mt-16 space-y-16">
-        <div class="card">
+
+    <div class="case-grid">
+        <article class="case-card">
             <span class="mono text-xs tracking-wider text-[var(--c-primary)]">FINTECH · LIVE SCORING</span>
-            <h3 class="text-2xl font-bold text-white mt-3 mb-6">Global Processor Slashes Fraud Exposure</h3>
-            <div class="grid md:grid-cols-3 gap-8 text-sm leading-relaxed">
+            <h3>Global Processor Slashes Fraud Exposure</h3>
+            <div class="case-columns">
                 <div>
-                    <strong class="text-white block mb-1">Challenge</strong>
-                    Batch heuristics failing to detect adaptive fraud vectors across geographies.
+                    <strong>Challenge</strong>
+                    <p>Batch heuristics missed adaptive fraud vectors across regions.</p>
                 </div>
                 <div>
-                    <strong class="text-white block mb-1">Solution</strong>
-                    Streaming feature store + ensemble inference engine with lineage and rollback controls.
+                    <strong>Solution</strong>
+                    <p>Streaming feature store + ensemble inference with lineage and rollback controls.</p>
                 </div>
                 <div>
-                    <strong class="text-white block mb-1">Impact</strong>
-                    99.9% fraudulent event suppression; false positive reduction; $15M annualized loss avoidance.
+                    <strong>Impact</strong>
+                    <p>99.9% suppression · $15M annualized loss avoidance · 45% fewer false positives.</p>
                 </div>
             </div>
-        </div>
-        <div class="text-center max-w-3xl mx-auto">
-            <p class="text-xl italic">"Their engineering rigor and velocity transformed our detection strategy inside a single quarter."</p>
-            <p class="mt-4 font-semibold text-white">— CTO, Global Payments Group</p>
+            <div class="case-meta">
+                <div>
+                    <p class="mono text-xs">Stack</p>
+                    <p>AWS MSK · Databricks Delta · Kafka Connect · SageMaker · Snowflake · Monte Carlo</p>
+                </div>
+                <div>
+                    <p class="mono text-xs">SLOs</p>
+                    <p>p99 latency &lt; 200ms · model drift &lt; 1.5% · false positives &lt; 0.3%</p>
+                </div>
+                <div>
+                    <p class="mono text-xs">Team</p>
+                    <p>4 Bytewise (architect, 2 data engineers, MLOps) + 2 client SMEs</p>
+                </div>
+            </div>
+        </article>
+        <article class="case-card">
+            <span class="mono text-xs tracking-wider text-[var(--c-primary)]">HEALTHCARE · PREDICTIVE CARE</span>
+            <h3>Readmission Risk Intelligence at Scale</h3>
+            <div class="case-columns">
+                <div>
+                    <strong>Challenge</strong>
+                    <p>Fragmented EHR + discharge data blocked proactive outreach.</p>
+                </div>
+                <div>
+                    <strong>Solution</strong>
+                    <p>Secure lake foundation, privacy-preserving feature engineering, explainable daily risk scoring.</p>
+                </div>
+                <div>
+                    <strong>Impact</strong>
+                    <p>45% reduction in 30-day readmissions · 20% faster care coordination.</p>
+                </div>
+            </div>
+            <div class="case-meta">
+                <div>
+                    <p class="mono text-xs">Stack</p>
+                    <p>Azure Data Lake · Synapse · Databricks ML · Power BI · Azure DevOps · Immuta</p>
+                </div>
+                <div>
+                    <p class="mono text-xs">SLOs</p>
+                    <p>Model refresh nightly · explanation latency &lt; 2s · PHI access logged w/ 100% coverage</p>
+                </div>
+                <div>
+                    <p class="mono text-xs">Team</p>
+                    <p>Lead data scientist · healthcare SME · 2 analytics engineers · privacy officer</p>
+                </div>
+            </div>
+        </article>
+        <article class="case-card">
+            <span class="mono text-xs tracking-wider text-[var(--c-primary)]">INDUSTRIAL · EDGE ANALYTICS</span>
+            <h3>Predictive Maintenance Across 3 Continents</h3>
+            <div class="case-columns">
+                <div>
+                    <strong>Challenge</strong>
+                    <p>Siloed telemetry and high false alarms increased downtime.</p>
+                </div>
+                <div>
+                    <strong>Solution</strong>
+                    <p>Edge ingestion mesh, feature registry, inference-on-the-edge with central oversight.</p>
+                </div>
+                <div>
+                    <strong>Impact</strong>
+                    <p>28% drop in unplanned outages · $9M maintenance savings.</p>
+                </div>
+            </div>
+            <div class="case-meta">
+                <div>
+                    <p class="mono text-xs">Stack</p>
+                    <p>Azure IoT Hub · Databricks · MQTT edge agents · Grafana · Kubernetes</p>
+                </div>
+                <div>
+                    <p class="mono text-xs">SLOs</p>
+                    <p>Edge-to-cloud sync &lt; 5s · anomaly recall &gt; 92% · ops uptime 99.5%</p>
+                </div>
+                <div>
+                    <p class="mono text-xs">Team</p>
+                    <p>Edge architect · 2 platform engineers · reliability engineer · client OT lead</p>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <div class="testimonial-grid">
+        <div class="card">
+            <p class="text-xl text-white italic">“Bytewise collapsed a modernization we feared would drag on and left us with an operating model, not just code.”</p>
+            <p class="mt-4 text-sm text-[var(--c-text-low)]">CTO · Global Payments Group</p>
         </div>
         <div class="card">
-            <span class="mono text-xs tracking-wider text-[var(--c-primary)]">HEALTHCARE · PREDICTIVE CARE</span>
-            <h3 class="text-2xl font-bold text-white mt-3 mb-6">Readmission Risk Intelligence at Scale</h3>
-            <div class="grid md:grid-cols-3 gap-8 text-sm leading-relaxed">
-                <div>
-                    <strong class="text-white block mb-1">Challenge</strong>
-                    Fragmented clinical & discharge data obstructing proactive intervention.
-                </div>
-                <div>
-                    <strong class="text-white block mb-1">Solution</strong>
-                    Secure lake foundation + privacy-preserving feature engineering + daily risk stratification model.
-                </div>
-                <div>
-                    <strong class="text-white block mb-1">Impact</strong>
-                    45% reduction in 30-day readmissions; improved care coordination signals; elevated outcomes.
-                </div>
-            </div>
-        </div>
-        <div class="text-center max-w-3xl mx-auto">
-            <p class="text-xl italic">"Directed, explainable prediction changed our continuum-of-care decisions overnight."</p>
-            <p class="mt-4 font-semibold text-white">— Chief Medical Officer</p>
+            <p class="text-xl text-white italic">“They speak board, security, and engineering fluently. Our clinicians finally trust the insights they receive.”</p>
+            <p class="mt-4 text-sm text-[var(--c-text-low)]">Chief Medical Officer · Integrated Health Network</p>
         </div>
     </div>
+
+    <div class="proof-stack glass">
+        <div>
+            <p class="section-label">TRUST</p>
+            <h3 class="text-3xl font-bold text-white">Security & Compliance By Design</h3>
+            <p class="mt-4 text-[var(--c-text-mid)]">SOC2 Type II, GDPR-ready delivery, and confidential computing options for the most sensitive data.</p>
+        </div>
+        <div class="stack-grid">
+            <div>
+                <p class="mono text-xs">Controls</p>
+                <p>Zero-trust access · Key management · Data residency guarantees</p>
+            </div>
+            <div>
+                <p class="mono text-xs">Certifications</p>
+                <p>SOC2 Type II · ISO 27001 partner network</p>
+            </div>
+            <div>
+                <p class="mono text-xs">Templates</p>
+                <p>Security briefing, DPIA support, vendor diligence packets</p>
+            </div>
+        </div>
+    </div>
+
 </section>

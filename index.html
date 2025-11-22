@@ -37,7 +37,7 @@
         theme: {
           extend: {
             fontFamily: { sans: ['Inter','ui-sans-serif'], mono: ['JetBrains Mono','monospace'] },
-            colors: { primary: '#b02a37', secondary: '#7a1c28' }
+            colors: { primary: '#0ea5e9', secondary: '#8b5cf6' }
           }
         }
       }};
@@ -67,6 +67,22 @@
     <div class="aurora" aria-hidden="true"></div>
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[var(--c-primary)] text-white px-4 py-2 rounded-md z-50">Skip to content</a>
 
+    <div class="utility-bar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-xs sm:text-sm">
+            <div class="flex flex-wrap items-center gap-4">
+                <span class="mono text-[var(--c-text-low)]">24/7 Critical Support Line</span>
+                <a href="tel:+18775550123" class="text-white font-semibold">+1 (877) 555-0123</a>
+                <span class="hidden md:inline text-[var(--c-text-low)]">|</span>
+                <a href="mailto:hello@bytewiseltd.com" class="text-white">hello@bytewiseltd.com</a>
+            </div>
+            <div class="flex flex-wrap items-center gap-3">
+                <span class="badge">SOC2 Type II</span>
+                <span class="badge">GDPR Ready</span>
+                <a href="#contact" class="link-underline">Schedule a Call →</a>
+            </div>
+        </div>
+    </div>
+
     <header class="glass sticky top-0 z-40 backdrop-blur-xl">
         <nav class="max-w-7xl mx-auto px-6 lg:px-10 py-4 flex items-center justify-between" aria-label="Primary">
             <a href="#home" class="flex items-center gap-3 group">
@@ -78,17 +94,15 @@
                 <span class="text-xl font-extrabold tracking-tight text-white">Bytewise</span>
             </a>
             <div class="hidden md:flex items-center gap-8 text-sm">
-                <a class="nav-link" href="#home">Home</a>
-                <a class="nav-link" href="#about">About</a>
-                <a class="nav-link" href="#capabilities">Capabilities</a>
+                <a class="nav-link" href="#home">Overview</a>
+                <a class="nav-link" href="#approach">Approach</a>
                 <a class="nav-link" href="#services">Services</a>
-                <a class="nav-link" href="#approach">Our Approach</a>
-                <a class="nav-link" href="#success-stories">Success Stories</a>
+                <a class="nav-link" href="#work">Work</a>
                 <a class="nav-link" href="#insights">Insights</a>
-                <a class="nav-link" href="#careers">Careers</a>
+                <a class="nav-link" href="#contact">Contact</a>
             </div>
             <div class="flex items-center gap-4">
-                <a href="#contact" class="btn hidden md:inline-flex text-sm">Contact Sales</a>
+                <a href="#contact" class="btn hidden md:inline-flex text-sm">Schedule Review</a>
                 <button id="menuBtn" class="md:hidden text-white p-2 rounded-lg hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--c-primary)]" aria-label="Toggle navigation" aria-expanded="false">
                     <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                         <path class="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/>
@@ -98,20 +112,23 @@
         </nav>
         <div id="mobile-menu" class="md:hidden px-6 pt-0 pb-6 space-y-4">
             <div class="flex flex-col gap-3 font-medium">
-                <a class="nav-link" href="#home">Home</a>
-                <a class="nav-link" href="#about">About</a>
-                <a class="nav-link" href="#capabilities">Capabilities</a>
-                <a class="nav-link" href="#approach">Our Approach</a>
-                <a class="nav-link" href="#success-stories">Success Stories</a>
+                <a class="nav-link" href="#home">Overview</a>
+                <a class="nav-link" href="#approach">Approach</a>
+                <a class="nav-link" href="#services">Services</a>
+                <a class="nav-link" href="#work">Work</a>
                 <a class="nav-link" href="#insights">Insights</a>
-                <a class="nav-link" href="#careers">Careers</a>
-                <a class="btn mt-2" href="#contact">Contact Sales</a>
+                <a class="btn mt-2" href="#contact">Schedule Review</a>
             </div>
         </div>
     </header>
 
     <main id="main-content" class="flex-1 max-w-7xl mx-auto w-full px-6 lg:px-10">
-        </main>
+        <noscript>
+            <div class="noscript-warning">
+                JavaScript powers the dynamic sections on this site. Enable it to view the engineered experience or open <a class="link-underline" href="pages/home.html">pages/home.html</a> directly.
+            </div>
+        </noscript>
+    </main>
 
     <footer class="mt-32 border-t border-[var(--c-border)]">
         <div class="max-w-7xl mx-auto px-6 lg:px-10 py-20">
@@ -125,42 +142,49 @@
                         </svg>
                         <span class="text-xl font-extrabold tracking-tight text-white">Bytewise</span>
                     </a>
-                    <p class="mt-4 text-sm max-w-xs leading-relaxed">
-                        Engineering resilient data foundations and AI systems for mission-grade performance.
+                    <p class="mt-4 text-sm max-w-sm leading-relaxed">
+                        We help regulated enterprises modernize data foundations, ship production AI, and stand up observability-backed operations.
                     </p>
-                    <p class="mt-6 text-xs text-[var(--c-text-low)]">
-                        <a href="#contact" class="hover:text-[var(--c-primary)] transition">Contact Sales</a> | <a href="#careers" class="hover:text-[var(--c-primary)] transition">Join Our Team</a>
-                    </p>
+                    <div class="mt-6 flex flex-wrap gap-3 text-xs text-[var(--c-text-low)]">
+                        <span class="badge">SOC2 Type II</span>
+                        <span class="badge">GDPR Ready</span>
+                        <span class="badge">US + EU Delivery</span>
+                    </div>
                 </div>
 
                 <div>
-                    <h3 class="text-sm font-semibold tracking-wider uppercase text-white mb-4">Company</h3>
+                    <h3 class="text-sm font-semibold tracking-wider uppercase text-white mb-4">Navigation</h3>
                     <ul class="space-y-3 text-sm">
-                        <li><a class="hover:text-white transition" href="#home">Home</a></li>
-                        <li><a class="hover:text-white transition" href="#about">About Us</a></li>
-                        <li><a class="hover:text-white transition" href="#careers">Careers</a></li>
+                        <li><a class="hover:text-white transition" href="#home">Overview</a></li>
+                        <li><a class="hover:text-white transition" href="#solutions">Solutions</a></li>
+                        <li><a class="hover:text-white transition" href="#process">Process</a></li>
+                        <li><a class="hover:text-white transition" href="#proof">Proof</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h3 class="text-sm font-semibold tracking-wider uppercase text-white mb-4">Resources</h3>
                     <ul class="space-y-3 text-sm">
-                        <li><a class="hover:text-white transition" href="#capabilities">Capabilities</a></li>
-                        <li><a class="hover:text-white transition" href="#approach">Our Approach</a></li>
-                        <li><a class="hover:text-white transition" href="#success-stories">Success Stories</a></li>
-                        <li><a class="hover:text-white transition" href="#insights">Insights & Research</a></li>
+                        <li><a class="hover:text-white transition" href="#capabilities">Capability Deep Dive</a></li>
+                        <li><a class="hover:text-white transition" href="#insights">Insights Library</a></li>
+                        <li><a class="hover:text-white transition" href="#proof">Case Outcomes</a></li>
+                        <li><a class="hover:text-white transition" href="#engage">Engagement Models</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold tracking-wider uppercase text-white mb-4">Contact</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="tel:+18775550123" class="hover:text-white transition">+1 (877) 555-0123</a></li>
+                        <li><a href="mailto:hello@bytewiseltd.com" class="hover:text-white transition">hello@bytewiseltd.com</a></li>
+                        <li><a class="hover:text-white transition" href="#contact">Book Architecture Review</a></li>
                     </ul>
                 </div>
 
                 <div class="col-span-2 md:col-span-1 lg:col-span-1">
-                    <h3 class="text-sm font-semibold tracking-wider uppercase text-white mb-4">Stay Informed</h3>
-                    <p class="text-sm mb-4">Subscribe for the latest in MLOps and Data Strategy.</p>
-                    <form id="newsletter-form" class="space-y-3" novalidate>
-                        <input id="newsletter-email" name="email" type="email" required placeholder="Work Email"
-                               class="w-full p-3 rounded-lg bg-black/25 border border-[var(--c-border)] text-sm text-white placeholder:text-[var(--c-text-low)] focus:outline-none focus:border-[var(--c-primary)] transition">
-                        <button type="submit" class="btn h-10 w-full text-sm" id="newsletterSubmit">Subscribe</button>
-                        <p id="newsletterStatus" class="text-xs text-[var(--c-text-low)] h-4"></p>
-                    </form>
+                    <h3 class="text-sm font-semibold tracking-wider uppercase text-white mb-4">Office</h3>
+                    <p class="text-sm">Global delivery with pods across North America and EMEA. Secure client spaces available on request.</p>
+                    <a href="#contact" class="btn text-xs mt-4">Send RFP / NDA</a>
                 </div>
             </div>
 
@@ -194,6 +218,29 @@
                     <label class="block mb-2 text-xs font-semibold tracking-wide uppercase text-[var(--c-text-low)]" for="modal-email">Work Email</label>
                     <input id="modal-email" name="email" type="email" required autocomplete="email"
                            class="w-full p-3.5 rounded-lg bg-black/25 border border-[var(--c-border)] text-sm text-white placeholder:text-[var(--c-text-low)] focus:outline-none focus:border-[var(--c-primary)] transition">
+                </div>
+                <div>
+                    <label class="block mb-2 text-xs font-semibold tracking-wide uppercase text-[var(--c-text-low)]" for="modal-initiative">Initiative Type</label>
+                    <select id="modal-initiative" name="initiative" required
+                        class="w-full p-3.5 rounded-lg bg-black/25 border border-[var(--c-border)] text-sm text-white focus:outline-none focus:border-[var(--c-primary)] transition">
+                        <option value="" disabled selected>Select an initiative</option>
+                        <option>Platform Modernization</option>
+                        <option>Applied AI / MLOps</option>
+                        <option>Analytics Enablement</option>
+                        <option>Managed DataOps</option>
+                        <option>Advisory / Strategy</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block mb-2 text-xs font-semibold tracking-wide uppercase text-[var(--c-text-low)]" for="modal-timeline">Urgency</label>
+                    <select id="modal-timeline" name="timeline" required
+                        class="w-full p-3.5 rounded-lg bg-black/25 border border-[var(--c-border)] text-sm text-white focus:outline-none focus:border-[var(--c-primary)] transition">
+                        <option value="" disabled selected>When do you need help?</option>
+                        <option>Immediate (active incident or project)</option>
+                        <option>Near-term (approvals in motion)</option>
+                        <option>Planning phase (scoping underway)</option>
+                        <option>Exploratory / early research</option>
+                    </select>
                 </div>
                 <div>
                     <label class="block mb-2 text-xs font-semibold tracking-wide uppercase text-[var(--c-text-low)]" for="modal-context">Project Context</label>

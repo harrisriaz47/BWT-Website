@@ -1,62 +1,59 @@
-<section id="capabilities" class="py-24">
+<section id="capabilities" class="py-24 space-y-16">
     <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-4xl md:text-5xl font-bold text-white">Core Capabilities</h2>
-        <p class="mt-4 text-lg text-[var(--c-text-mid)]">
-            End-to-end services designed to build, scale, and optimize your entire data value chain.
-        </p>
+        <p class="section-label">CAPABILITY DEEP DIVE</p>
+        <h2 class="text-4xl md:text-5xl font-bold text-white">Tooling, Deliverables, and Governance You Can Inspect</h2>
+        <p class="mt-4 text-lg text-[var(--c-text-mid)]">Explore how Bytewise structures teams, selects platforms, and documents every milestone.</p>
     </div>
 
-    <div class="mt-20">
-        <h3 class="text-3xl font-bold text-white mb-8">Data Engineering & Platforms</h3>
-        <div class="grid gap-8 md:grid-cols-3">
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Platform Modernization</h4>
-                <p class="mt-3 text-sm">Design and migration to scalable cloud data platforms (Snowflake, Databricks, Redshift, BigQuery).</p>
-            </div>
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Streaming & Batch Pipelines</h4>
-                <p class="mt-3 text-sm">Resilient ETL/ELT data pipelines for real-time and batch processing (e.g., Spark, Kafka, Flink).</p>
-            </div>
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Data Lake & Lakehouse</h4>
-                <p class="mt-3 text-sm">Architecting unified repositories for structured and unstructured data analysis.</p>
-            </div>
-        </div>
+    <div class="capability-grid">
+        <article class="card">
+            <h3>Data Platforms</h3>
+            <p class="text-sm text-[var(--c-text-mid)]">Accelerators covering ingestion, modeling, governance, and FinOps.</p>
+            <ul>
+                <li>Blueprints for Snowflake, Databricks, BigQuery</li>
+                <li>Terraform modules + dbt packages</li>
+                <li>Lineage + data quality guardrails</li>
+            </ul>
+            <p class="mono text-xs text-[var(--c-text-low)]">Deliverables: Architecture pack, catalog, runbook</p>
+        </article>
+        <article class="card">
+            <h3>Applied AI & MLOps</h3>
+            <p class="text-sm text-[var(--c-text-mid)]">From feature stores to model observability and responsible AI policies.</p>
+            <ul>
+                <li>Feature engineering kit + monitoring templates</li>
+                <li>ML pipeline scaffolds (SageMaker, Vertex, Databricks)</li>
+                <li>LLM integration guardrails + red teaming</li>
+            </ul>
+            <p class="mono text-xs text-[var(--c-text-low)]">Deliverables: Model cards, incident playbooks</p>
+        </article>
+        <article class="card">
+            <h3>Analytics & Activation</h3>
+            <p class="text-sm text-[var(--c-text-mid)]">Human-centered insights with governance for self-service.</p>
+            <ul>
+                <li>Executive & operational dashboard templates</li>
+                <li>Semantic models + KPI dictionaries</li>
+                <li>Enablement curriculum + office hours</li>
+            </ul>
+            <p class="mono text-xs text-[var(--c-text-low)]">Deliverables: BI catalog, training assets</p>
+        </article>
+        <article class="card">
+            <h3>Security & Compliance</h3>
+            <p class="text-sm text-[var(--c-text-mid)]">Embedded governance from kickoff through transition.</p>
+            <ul>
+                <li>SOC2, HIPAA, PCI aware delivery model</li>
+                <li>DPIA support + data handling policies</li>
+                <li>Continuous threat modeling + audit packs</li>
+            </ul>
+            <p class="mono text-xs text-[var(--c-text-low)]">Deliverables: Control matrix, auditor packet</p>
+        </article>
     </div>
 
-    <div class="mt-20">
-        <h3 class="text-3xl font-bold text-white mb-8">Business Intelligence & Analytics</h3>
-        <div class="grid gap-8 md:grid-cols-3">
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Visualization & Dashboards</h4>
-                <p class="mt-3 text-sm">Actionable insights through executive dashboards and BI tools (Tableau, Power BI, Looker).</p>
-            </div>
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Self-Service Enablement</h4>
-                <p class="mt-3 text-sm">Empowering your teams with the tools and training to find their own answers.</p>
-            </div>
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Predictive Analytics</h4>
-                <p class="mt-3 text-sm">Leveraging historical data to forecast trends, identify risks, and uncover opportunities.</p>
-            </div>
+    <div class="glass capability-detail">
+        <div>
+            <h3 class="text-3xl font-bold text-white">See A Sample Deliverable Set</h3>
+            <p class="mt-3 text-[var(--c-text-mid)]">We can walk you through anonymized playbooks, Jira/Wiki structures, and instrumentation dashboards during a 20-min call.</p>
         </div>
+        <a href="#contact" class="btn">Request The Deep Dive</a>
     </div>
 
-    <div class="mt-20">
-        <h3 class="text-3xl font-bold text-white mb-8">Applied AI & Machine Learning</h3>
-        <div class="grid gap-8 md:grid-cols-3">
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Custom Model Development</h4>
-                <p class="mt-3 text-sm">Building bespoke ML models for scoring, forecasting, NLP, and computer vision.</p>
-            </div>
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">MLOps & Production AI</h4>
-                <p class="mt-3 text-sm">Automating the lifecycle of ML models for robust, scalable, and observable deployment.</p>
-            </div>
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Generative AI Integration</h4>
-                <p class="mt-3 text-sm">Integrating and fine-tuning LLMs securely with your proprietary data to drive new efficiencies.</p>
-            </div>
-        </div>
-    </div>
 </section>

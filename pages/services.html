@@ -1,146 +1,359 @@
-<section id="services" class="py-24">
-    <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-4xl md:text-5xl font-bold text-white">Services & Consulting</h2>
-        <p class="mt-4 text-lg text-[var(--c-text-mid)]">
-            Our services are designed to meet you where you are—from foundational engineering to strategic advisory, we provide the experts and the execution to deliver mission-grade results.
+<section id="services" class="py-24 space-y-20">
+    <!-- Hero -->
+    <div class="max-w-4xl mx-auto text-center">
+        <p class="section-label">SERVICES</p>
+        <h2 class="text-4xl md:text-5xl font-bold text-white mt-4">Services Built for Every Stage of Data Maturity</h2>
+        <p class="mt-6 text-lg text-[var(--c-text-mid)] max-w-3xl mx-auto">
+            From strategic roadmapping to hands-on platform engineering to 24/7 managed operations. Choose the engagement model that fits your needs.
         </p>
     </div>
 
-    <div class="mt-20">
-        <h3 class="text-3xl font-bold text-white mb-8">Data Engineering Services</h3>
-        <p class="max-w-2xl text-[var(--c-text-mid)] -mt-4 mb-8">
-            Your data's potential is locked by legacy systems and fragmented pipelines. Our data engineering services build the modern, scalable platforms that turn raw data into a reliable, high-velocity asset ready for analytics and AI.
-        </p>
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Cloud Platform Modernization</h4>
-                <p class="mt-3 text-sm">Migrating and re-architecting legacy systems on AWS, GCP, or Azure. We build for performance, cost, and scale.</p>
+    <!-- Tier 1: Strategic Advisory (Premium) -->
+    <div class="space-y-6">
+        <div class="text-center">
+            <span class="service-tier service-tier--premium">TIER 1 · PREMIUM</span>
+        </div>
+        <div class="card card--elevated p-10">
+            <div class="text-center max-w-3xl mx-auto mb-8">
+                <h3 class="text-3xl font-bold text-white">Strategic Advisory</h3>
+                <p class="mt-3 text-lg text-[var(--c-text-mid)]">Fractional CDO, architecture council, and investment diligence for CTOs and boards navigating modernization.</p>
             </div>
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Streaming & Batch Pipelines</h4>
-                <p class="mt-3 text-sm">Resilient, low-latency ETL/ELT pipelines (Spark, Kafka, Flink, dbt) to move data reliably from any source.</p>
+            
+            <div class="grid-2 gap-6">
+                <div>
+                    <h4 class="text-xl font-bold text-white">When You Need This</h4>
+                    <ul class="mt-3 space-y-2 text-sm text-[var(--c-text-mid)]">
+                        <li>• Board or C-suite asking: "Should we modernize our data platform?"</li>
+                        <li>• Multiple vendor pitches, unclear which path is right</li>
+                        <li>• Need to build data team capability from scratch</li>
+                        <li>• Existing platform failing but unclear why</li>
+                        <li>• M&A due diligence on data/AI capabilities</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-white">What You Get</h4>
+                    <ul class="mt-3 space-y-2 text-sm text-[var(--c-text-mid)]">
+                        <li>• Strategic roadmap aligned to business priorities</li>
+                        <li>• Build vs. buy vs. outsource recommendations</li>
+                        <li>• Vendor selection and RFP support</li>
+                        <li>• Organization design and hiring plans</li>
+                        <li>• Board-ready business cases and ROI models</li>
+                        <li>• Architecture reviews and technical audits</li>
+                    </ul>
+                </div>
             </div>
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Lakehouse & Warehouse</h4>
-                <p class="mt-3 text-sm">Expert architecture for Databricks, Snowflake, and BigQuery, creating a single source of truth for all your data.</p>
+
+            <div class="mt-8 p-6 bg-[var(--c-surface)] border border-[var(--c-border)] rounded-lg">
+                <div class="grid-3 gap-6">
+                    <div>
+                        <p class="mono text-xs text-[var(--c-primary)] mb-2">TEAM</p>
+                        <p class="text-sm text-[var(--c-text-mid)]">Principal Architect or former CDO, backed by solution SMEs as needed</p>
+                    </div>
+                    <div>
+                        <p class="mono text-xs text-[var(--c-primary)] mb-2">ENGAGEMENT MODEL</p>
+                        <p class="text-sm text-[var(--c-text-mid)]">Retainer (flexible hours) or project-based workshops</p>
+                    </div>
+                    <div>
+                        <p class="mono text-xs text-[var(--c-primary)] mb-2">TYPICAL DURATION</p>
+                        <p class="text-sm text-[var(--c-text-mid)]">3-6 months for strategic initiatives; ongoing for fractional CDO</p>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Data Governance & Security</h4>
-                <p class="mt-3 text-sm">Implementing robust data quality, lineage, and access-control frameworks to ensure your data is secure, compliant, and trustworthy.</p>
+
+            <div class="mt-6 text-center">
+                <a href="#contact" class="btn">Schedule Executive Briefing</a>
             </div>
         </div>
     </div>
 
-    <div class="mt-20">
-        <h3 class="text-3xl font-bold text-white mb-8">BI & Analytics Consulting</h3>
-        <p class="max-w-2xl text-[var(--c-text-mid)] -mt-4 mb-8">
-            Go beyond simple reporting. We help you build a data-driven culture by translating complex data into clear, actionable insights through self-service analytics and predictive forecasting.
-        </p>
-        <div class="grid gap-8 md:grid-cols-3">
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Executive & Operational Dashboards</h4>
-                <p class="mt-3 text-sm">We build high-impact visualization systems (in Power BI, Tableau, Looker) that provide a clear line of sight into KPIs.</p>
+    <!-- Tier 2: Platform Engineering (Core) -->
+    <div class="space-y-6">
+        <div class="text-center">
+            <span class="service-tier service-tier--core">TIER 2 · CORE</span>
+        </div>
+        <div class="space-y-10">
+            <!-- Data Platform Modernization -->
+            <div class="card p-8">
+                <span class="badge badge--primary">Platform Engineering</span>
+                <h3 class="text-2xl font-bold text-white mt-4">Data Platform Modernization</h3>
+                <p class="mt-3 text-[var(--c-text-mid)]">
+                    Build or modernize a lakehouse/warehouse with reproducible IaC, dbt models, and automated governance. We design for scale, cost-efficiency, and vendor portability.
+                </p>
+                
+                <div class="grid-2 gap-6 mt-6">
+                    <div>
+                        <h5 class="text-sm font-bold text-white mono">USE CASES</h5>
+                        <ul class="mt-2 space-y-1 text-sm text-[var(--c-text-mid)]">
+                            <li>• Legacy warehouse migration (Oracle, Teradata → Cloud)</li>
+                            <li>• Lakehouse consolidation (Databricks, Snowflake, BigQuery)</li>
+                            <li>• Data mesh implementation with domain ownership</li>
+                            <li>• Real-time streaming pipelines (Kafka, Kinesis)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="text-sm font-bold text-white mono">STACK FOCUS</h5>
+                        <p class="mt-2 text-sm text-[var(--c-text-mid)]">Snowflake · Databricks · BigQuery · dbt · Airflow · Terraform · Great Expectations · Monte Carlo</p>
+                    </div>
+                </div>
+
+                <div class="mt-6 p-4 bg-[var(--c-surface)] border border-[var(--c-border)] rounded-lg">
+                    <div class="grid-3 gap-4">
+                        <div>
+                            <p class="mono text-xs text-[var(--c-primary)]">TEAM</p>
+                            <p class="text-xs text-[var(--c-text-mid)]">Lead Platform Architect + 2 Senior Data Engineers + DataOps</p>
+                        </div>
+                        <div>
+                            <p class="mono text-xs text-[var(--c-primary)]">DELIVERABLES</p>
+                            <p class="text-xs text-[var(--c-text-mid)]">IaC repo, lineage + cost dashboard, SLO matrix, runbooks</p>
+                        </div>
+                        <div>
+                            <p class="mono text-xs text-[var(--c-primary)]">TIMELINE</p>
+                            <p class="text-xs text-[var(--c-text-mid)]">Discovery → Design → Build → Transition (4-6 months typical)</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Self-Service Analytics Enablement</h4>
-                <p class="mt-3 text-sm">Empowering your business teams with the curated data models, tools, and training to find their own answers.</p>
+
+            <!-- Applied AI & MLOps -->
+            <div class="card p-8">
+                <span class="badge badge--primary">Platform Engineering</span>
+                <h3 class="text-2xl font-bold text-white mt-4">Applied AI & MLOps</h3>
+                <p class="mt-3 text-[var(--c-text-mid)]">
+                    Productionize ML models or LLM-powered workflows with automated testing, feature stores, and drift detection. Move from notebook experiments to production systems.
+                </p>
+                
+                <div class="grid-2 gap-6 mt-6">
+                    <div>
+                        <h5 class="text-sm font-bold text-white mono">USE CASES</h5>
+                        <ul class="mt-2 space-y-1 text-sm text-[var(--c-text-mid)]">
+                            <li>• Predictive models (churn, fraud, forecasting)</li>
+                            <li>• LLM integration for enterprises (RAG, fine-tuning)</li>
+                            <li>• Computer vision and NLP applications</li>
+                            <li>• ML platform build-out (feature stores, model registry)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="text-sm font-bold text-white mono">STACK FOCUS</h5>
+                        <p class="mt-2 text-sm text-[var(--c-text-mid)]">SageMaker · Vertex · Databricks ML · MLflow · Feast · LangChain · Azure OpenAI · Bedrock</p>
+                    </div>
+                </div>
+
+                <div class="mt-6 p-4 bg-[var(--c-surface)] border border-[var(--c-border)] rounded-lg">
+                    <div class="grid-3 gap-4">
+                        <div>
+                            <p class="mono text-xs text-[var(--c-primary)]">TEAM</p>
+                            <p class="text-xs text-[var(--c-text-mid)]">Applied Scientist + MLOps Engineer + Platform Engineer + Responsible AI advisor</p>
+                        </div>
+                        <div>
+                            <p class="mono text-xs text-[var(--c-primary)]">DELIVERABLES</p>
+                            <p class="text-xs text-[var(--c-text-mid)]">Feature store, automated tests, model cards, governance checklist</p>
+                        </div>
+                        <div>
+                            <p class="mono text-xs text-[var(--c-primary)]">TIMELINE</p>
+                            <p class="text-xs text-[var(--c-text-mid)]">Assessment → Prototype → Production (3-5 months typical)</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Predictive Forecasting & Modeling</h4>
-                <p class="mt-3 text-sm">Leveraging historical data to build models that forecast trends, identify risks, and uncover revenue opportunities.</p>
+
+            <!-- Analytics Enablement -->
+            <div class="card p-8">
+                <span class="badge badge--primary">Platform Engineering</span>
+                <h3 class="text-2xl font-bold text-white mt-4">Analytics Enablement</h3>
+                <p class="mt-3 text-[var(--c-text-mid)]">
+                    Build executive dashboards, self-service BI platforms, and semantic layers that empower business users while maintaining governance.
+                </p>
+                
+                <div class="grid-2 gap-6 mt-6">
+                    <div>
+                        <h5 class="text-sm font-bold text-white mono">USE CASES</h5>
+                        <ul class="mt-2 space-y-1 text-sm text-[var(--c-text-mid)]">
+                            <li>• Executive KPI dashboards and scorecards</li>
+                            <li>• Self-service BI with governance guardrails</li>
+                            <li>• Semantic layer and metrics catalog</li>
+                            <li>• Embedded analytics for SaaS products</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="text-sm font-bold text-white mono">STACK FOCUS</h5>
+                        <p class="mt-2 text-sm text-[var(--c-text-mid)]">Power BI · Tableau · Looker · dbt Semantic Layer · Cube.js · Superset</p>
+                    </div>
+                </div>
+
+                <div class="mt-6 p-4 bg-[var(--c-surface)] border border-[var(--c-border)] rounded-lg">
+                    <div class="grid-3 gap-4">
+                        <div>
+                            <p class="mono text-xs text-[var(--c-primary)]">TEAM</p>
+                            <p class="text-xs text-[var(--c-text-mid)]">Analytics Architect + 2 Analytics Engineers + UX Designer</p>
+                        </div>
+                        <div>
+                            <p class="mono text-xs text-[var(--c-primary)]">DELIVERABLES</p>
+                            <p class="text-xs text-[var(--c-text-mid)]">BI catalog, semantic models, KPI dictionary, training materials</p>
+                        </div>
+                        <div>
+                            <p class="mono text-xs text-[var(--c-primary)]">TIMELINE</p>
+                            <p class="text-xs text-[var(--c-text-mid)]">Requirements → Build → Enablement (2-4 months typical)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a href="#contact" class="btn">Discuss Your Platform Project</a>
+        </div>
+    </div>
+
+    <!-- Tier 3: Managed Operations -->
+    <div class="space-y-6">
+        <div class="text-center">
+            <span class="service-tier service-tier--supporting">TIER 3 · ONGOING</span>
+        </div>
+        <div class="card card--elevated p-10">
+            <div class="text-center max-w-3xl mx-auto mb-8">
+                <h3 class="text-3xl font-bold text-white">Managed Operations</h3>
+                <p class="mt-3 text-lg text-[var(--c-text-mid)]">24/7 DataOps with SLA-backed reliability, observability, and optimization for production platforms.</p>
+            </div>
+            
+            <div class="grid-2 gap-6">
+                <div>
+                    <h4 class="text-xl font-bold text-white">When You Need This</h4>
+                    <ul class="mt-3 space-y-2 text-sm text-[var(--c-text-mid)]">
+                        <li>• Production platform requires 24/7 monitoring</li>
+                        <li>• Internal team lacks DataOps depth or bandwidth</li>
+                        <li>• Need guaranteed uptime for mission-critical workloads</li>
+                        <li>• Want continuous optimization without hiring</li>
+                        <li>• Compliance requires documented operational controls</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-white">What You Get</h4>
+                    <ul class="mt-3 space-y-2 text-sm text-[var(--c-text-mid)]">
+                        <li>• 24/7 monitoring and incident response</li>
+                        <li>• Proactive optimization (cost, performance, security)</li>
+                        <li>• Monthly health reports and quarterly business reviews</li>
+                        <li>• Change management and release support</li>
+                        <li>• Runbooks and escalation procedures</li>
+                        <li>• SLA-backed uptime guarantees</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-8 p-6 bg-[var(--c-surface)] border border-[var(--c-border)] rounded-lg">
+                <div class="grid-3 gap-6">
+                    <div>
+                        <p class="mono text-xs text-[var(--c-primary)] mb-2">TEAM</p>
+                        <p class="text-sm text-[var(--c-text-mid)]">Site Reliability Lead + DataOps Engineers + FinOps Analyst + Security Liaison</p>
+                    </div>
+                    <div>
+                        <p class="mono text-xs text-[var(--c-primary)] mb-2">ENGAGEMENT MODEL</p>
+                        <p class="text-sm text-[var(--c-text-mid)]">Monthly subscription with SLA tiers (99.5%, 99.9%, 99.95%)</p>
+                    </div>
+                    <div>
+                        <p class="mono text-xs text-[var(--c-primary)] mb-2">ONBOARDING</p>
+                        <p class="text-sm text-[var(--c-text-mid)]">4-6 weeks for runbook creation, system instrumentation, team training</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 text-center">
+                <a href="#contact" class="btn">Explore Managed Services</a>
             </div>
         </div>
     </div>
 
-    <div class="mt-20">
-        <h3 class="text-3xl font-bold text-white mb-8">Applied AI & MLOps Services</h3>
-        <p class="max-w-2xl text-[var(--c-text-mid)] -mt-4 mb-8">
-            Move your AI initiatives from experimental pilots to production-grade systems. Our MLOps and Applied AI services help you build, deploy, and govern machine learning models that drive real business value.
-        </p>
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Custom Model Development</h4>
-                <p class="mt-3 text-sm">Building bespoke ML models for scoring, forecasting, NLP, and computer vision that are tuned to your specific business problem.</p>
+    <!-- Decision Tree -->
+    <div class="space-y-8">
+        <div class="text-center max-w-3xl mx-auto">
+            <p class="section-label">DECISION GUIDE</p>
+            <h3 class="text-3xl font-bold text-white mt-4">Choosing the Right Engagement</h3>
+        </div>
+        
+        <div class="space-y-4">
+            <div class="decision-node">
+                <strong>Do you have a clear technical roadmap?</strong>
+                <p class="mt-2 text-sm text-[var(--c-text-mid)]">
+                    <strong>No →</strong> Start with <strong>Strategic Advisory</strong> to define strategy, build business cases, and create implementation roadmap.<br>
+                    <strong>Yes →</strong> Move to platform engineering or managed operations.
+                </p>
             </div>
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Production MLOps Automation</h4>
-                <p class="mt-3 text-sm">Automating the entire ML lifecycle—from feature stores to CI/CD pipelines and model monitoring—for robust, scalable deployment.</p>
+            
+            <div class="decision-node">
+                <strong>Do you have internal engineering capacity?</strong>
+                <p class="mt-2 text-sm text-[var(--c-text-mid)]">
+                    <strong>Limited or none →</strong> Choose <strong>Platform Engineering</strong> with embedded teams or turnkey delivery.<br>
+                    <strong>Yes, but need expertise →</strong> Consider <strong>Advisory</strong> for architecture reviews and guidance.
+                </p>
             </div>
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Generative AI & LLM Integration</h4>
-                <p class="mt-3 text-sm">Integrating and fine-tuning LLMs (e.g., GPT-4, Llama) securely with your proprietary data to build intelligent, context-aware applications.</p>
-            </div>
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Model Governance & Observability</h4>
-                <p class="mt-3 text-sm">Implementing systems to monitor for model drift, ensure fairness, and maintain a full audit trail for regulatory compliance.</p>
+            
+            <div class="decision-node">
+                <strong>Do you need ongoing 24/7 operations?</strong>
+                <p class="mt-2 text-sm text-[var(--c-text-mid)]">
+                    <strong>Yes →</strong> <strong>Managed Operations</strong> provides SLA-backed reliability and continuous optimization.<br>
+                    <strong>No →</strong> Platform Engineering projects include transition/handoff with training.
+                </p>
             </div>
         </div>
     </div>
 
-    <div class="mt-20">
-        <h3 class="text-3xl font-bold text-white mb-8">Data Strategy & Advisory</h3>
-        <p class="max-w-2xl text-[var(--c-text-mid)] -mt-4 mb-8">
-            Your technology is only as good as the strategy behind it. Our advisory services provide the C-level guidance and technical roadmaps needed to align your data investments with your core business objectives.
-        </p>
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Strategic & Technical Roadmaps</h4>
-                <p class="mt-3 text-sm">A comprehensive, prioritized plan to move from your current state to a modern data platform, aligned with your 1, 3, and 5-year goals.</p>
-            </div>
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Data Monetization Strategies</h4>
-                <p class="mt-3 text-sm">Identifying new revenue streams and business models by leveraging your unique data assets in the market.</p>
-            </div>
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Platform & Cost Optimization</h4>
-                <p class="mt-3 text-sm">Auditing your existing cloud data stack to eliminate waste, optimize query performance, and significantly reduce your TCO.</p>
-            </div>
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Architectural Review & Audits</h4>
-                <p class="mt-3 text-sm">An objective, expert review of your current architecture to identify bottlenecks, security risks, and opportunities for improvement.</p>
-            </div>
+    <!-- Engagement Models -->
+    <div class="space-y-8">
+        <div class="text-center max-w-3xl mx-auto">
+            <p class="section-label">ENGAGEMENT MODELS</p>
+            <h3 class="text-3xl font-bold text-white mt-4">How We Work Together</h3>
+        </div>
+        
+        <div class="card">
+            <table class="detail-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Model</th>
+                        <th scope="col">Duration</th>
+                        <th scope="col">Team Structure</th>
+                        <th scope="col">Pricing</th>
+                        <th scope="col">Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Project-Based</strong></td>
+                        <td>3-6 months typical</td>
+                        <td>Dedicated pod with defined roles</td>
+                        <td>Fixed scope & fee</td>
+                        <td>Clear deliverables, bounded scope</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Embedded Teams</strong></td>
+                        <td>Ongoing (3-12+ months)</td>
+                        <td>Integrated with client backlog</td>
+                        <td>Monthly team rate</td>
+                        <td>Continuous roadmap execution</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Retainer Advisory</strong></td>
+                        <td>3-12 months</td>
+                        <td>Principal + SMEs as needed</td>
+                        <td>Monthly retainer hours</td>
+                        <td>Strategic guidance, architecture reviews</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Managed Services</strong></td>
+                        <td>12+ months</td>
+                        <td>SRE team with on-call rotation</td>
+                        <td>Monthly subscription</td>
+                        <td>24/7 operations, uptime guarantees</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
-    <div class="mt-20">
-        <h3 class="text-3xl font-bold text-white mb-8">Data Managed Services</h3>
-        <p class="max-w-2xl text-[var(--c-text-mid)] -mt-4 mb-8">
-            Keep your critical data platforms running at peak performance without the overhead. Our Managed Services team takes over the day-to-day operations, monitoring, and optimization of your data infrastructure.
+    <!-- CTA -->
+    <div class="glass p-10 text-center">
+        <h3 class="text-3xl font-bold text-white">Not sure which service fits your needs?</h3>
+        <p class="mt-4 text-[var(--c-text-mid)] max-w-2xl mx-auto">
+            Schedule a 30-minute consultation. We'll discuss your challenges, timeline, and constraints—then recommend the right engagement model.
         </p>
-        <div class="grid gap-8 md:grid-cols-3">
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">24/7 Platform Monitoring & Support</h4>
-                <p class="mt-3 text-sm">Proactive, 24/7 monitoring of your data pipelines, warehouses, and ML models to detect and resolve issues before they impact the business.</p>
-            </div>
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Continuous DataOps & Optimization</h4>
-                <p class="mt-3 text-sm">We handle all platform upgrades, performance tuning, and cost management, letting your team focus on building new products.</p>
-            </div>
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Security & Compliance Management</h4>
-                <p class="mt-3 text-sm">Ongoing management of access controls, security patches, and compliance reporting to ensure your data is always secure and audit-ready.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="mt-20">
-        <h3 class="text-3xl font-bold text-white mb-8">Embedded Teams & Expert Talent</h3>
-        <p class="max-w-2xl text-[var(--c-text-mid)] -mt-4 mb-8">
-            Augment your team with our pre-vetted, high-impact talent. We provide the expert Data Engineers, ML Scientists, and Platform Architects you need to accelerate your roadmap.
-        </p>
-        <div class="grid gap-8 md:grid-cols-3">
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Staff Augmentation</h4>
-                <p class="mt-3 text-sm">Place individual Bytewise consultants (e.g., Senior Data Engineer) directly into your existing teams to fill critical skill gaps.</p>
-            </div>
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Embedded Pods</h4>
-                <p class="mt-3 text-sm">Deploy a self-contained, outcome-driven Bytewise team (e.g., 2 Engineers, 1 Architect) to own and deliver an entire project.</p>
-            </div>
-            <div class="card">
-                <h4 class="text-xl font-bold text-white">Expert-on-Demand</h4>
-                <p class="mt-3 text-sm">Secure part-time or advisory access to our top-tier architects and data strategists for design reviews, validation, and C-level guidance.</p>
-            </div>
-        </div>
+        <a href="#contact" class="btn mt-8">Schedule Consultation</a>
     </div>
 </section>

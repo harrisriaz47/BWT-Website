@@ -1,28 +1,359 @@
-<section id="workflow" class="py-24">
-    <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-4xl md:text-5xl font-bold text-white">Delivery Framework</h2>
-        <p class="mt-4 text-lg text-[var(--c-text-mid)]">Transparent, iterative, instrumentation-driven execution.</p>
+<section id="approach" class="py-24 space-y-20">
+    <!-- Hero -->
+    <div class="max-w-4xl mx-auto text-center">
+        <p class="section-label">OUR APPROACH</p>
+        <h2 class="text-4xl md:text-5xl font-bold text-white mt-4">Systems Thinking Meets Execution Rigor</h2>
+        <p class="mt-6 text-lg text-[var(--c-text-mid)] max-w-3xl mx-auto">
+            We don't just implement tools—we architect durable, scalable data platforms aligned to your business model and growth trajectory. Every engagement blends strategic design with hands-on engineering.
+        </p>
     </div>
-    <div class="grid md:grid-cols-2 gap-8 mt-16 max-w-5xl mx-auto">
-        <div class="card">
-            <div class="text-5xl font-extrabold text-[var(--c-primary)] mb-3">01</div>
-            <h3 class="text-2xl font-bold text-white">Discovery & Alignment</h3>
-            <p class="mt-2">Landscape mapping, dependency analysis, risk modeling, and goal formalization. Output: architecture draft + measurable success metrics.</p>
+
+    <!-- Core Principles -->
+    <div class="space-y-8">
+        <div class="text-center max-w-3xl mx-auto">
+            <p class="section-label">PRINCIPLES</p>
+            <h3 class="text-3xl font-bold text-white mt-4">How We Think Differently</h3>
+        </div>
+        <div class="grid-2">
+            <div class="card">
+                <span class="badge badge--primary">01</span>
+                <h4 class="text-2xl font-bold text-white mt-4">Outcome-Driven Architecture</h4>
+                <p class="mt-3 text-[var(--c-text-mid)]">
+                    We start with business KPIs, not vendor RFPs. Every technical decision maps to measurable outcomes: cost reduction, revenue acceleration, risk mitigation. Technology choices follow strategy, not vice versa.
+                </p>
+                <div class="mt-4 code-block">
+                    <code class="text-xs">// We ask first:
+What business decision needs faster data?
+What's the cost of wrong predictions?
+What does "good enough" latency look like?
+
+// Then we design:
+Architecture → SLOs → Stack → Build</code>
+                </div>
+            </div>
+            <div class="card">
+                <span class="badge badge--primary">02</span>
+                <h4 class="text-2xl font-bold text-white mt-4">Instrumented by Default</h4>
+                <p class="mt-3 text-[var(--c-text-mid)]">
+                    Every platform ships with observability, cost tracking, and data lineage from day one. We don't bolt on monitoring as an afterthought—it's foundational infrastructure.
+                </p>
+                <div class="mt-4 code-block">
+                    <code class="text-xs">observability_stack:
+  data_quality: Great Expectations + Monte Carlo
+  lineage: OpenLineage + dbt docs
+  cost: FinOps dashboards with alerting
+  performance: p50/p95/p99 latency tracking</code>
+                </div>
+            </div>
+            <div class="card">
+                <span class="badge badge--primary">03</span>
+                <h4 class="text-2xl font-bold text-white mt-4">Vendor-Neutral Design</h4>
+                <p class="mt-3 text-[var(--c-text-mid)]">
+                    We avoid proprietary lock-in by default. Infrastructure-as-code, containerized workloads, and standard APIs mean you can switch clouds or vendors without rewriting your platform.
+                </p>
+                <div class="mt-4 code-block">
+                    <code class="text-xs">principles:
+  - IaC with Terraform (cloud-agnostic modules)
+  - dbt for transformations (portable SQL)
+  - Containerized ML (Kubernetes, not SageMaker-only)
+  - Open formats (Parquet, Delta, Iceberg)</code>
+                </div>
+            </div>
+            <div class="card">
+                <span class="badge badge--primary">04</span>
+                <h4 class="text-2xl font-bold text-white mt-4">Knowledge Transfer Built-In</h4>
+                <p class="mt-3 text-[var(--c-text-mid)]">
+                    We document as we build. Architecture decision records, runbooks, and training sessions ensure your team owns the platform after handoff. We don't create dependency—we build capability.
+                </p>
+                <div class="mt-4 code-block">
+                    <code class="text-xs">deliverables:
+  - Architecture diagrams + decision logs
+  - Runbooks for common operations
+  - Video walkthroughs of critical paths
+  - Office hours during transition period</code>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Methodology Deep-Dive -->
+    <div class="glass p-12 space-y-12">
+        <div class="text-center max-w-3xl mx-auto">
+            <p class="section-label">METHODOLOGY</p>
+            <h3 class="text-3xl font-bold text-white mt-4">Four-Phase Delivery Model</h3>
+            <p class="mt-4 text-[var(--c-text-mid)]">Every engagement follows a structured, transparent process with decision gates and executive-ready artifacts.</p>
+        </div>
+        
+        <div class="space-y-10">
+            <!-- Phase 1 -->
+            <div class="story-section">
+                <h4>PHASE 1 · DIAGNOSE</h4>
+                <div class="grid-2 mt-6">
+                    <div>
+                        <h5 class="text-xl font-bold text-white">Current State Assessment</h5>
+                        <p class="mt-2 text-sm text-[var(--c-text-mid)]">
+                            We inventory your data landscape: sources, pipelines, warehouses, BI tools, team capabilities. Identify technical debt, performance bottlenecks, security gaps, and cost inefficiencies.
+                        </p>
+                        <ul class="mt-3 space-y-1 text-sm text-[var(--c-text-mid)]">
+                            <li>• Architecture baseline documentation</li>
+                            <li>• Stakeholder interviews (business + technical)</li>
+                            <li>• Constraint mapping (budget, timeline, compliance)</li>
+                            <li>• Threat model and risk register</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="text-xl font-bold text-white">Success Criteria Definition</h5>
+                        <p class="mt-2 text-sm text-[var(--c-text-mid)]">
+                            Collaborate with your team to define measurable outcomes: query latency targets, cost reduction goals, compliance requirements, adoption KPIs.
+                        </p>
+                        <div class="mt-4 code-block">
+                            <code class="text-xs">example_success_criteria:
+  performance:
+    - p99 query latency < 2s
+    - data freshness < 15min
+  cost:
+    - 30% reduction in warehouse spend
+  governance:
+    - 100% data lineage coverage</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 p-4 bg-[var(--c-surface)] border border-[var(--c-border)] rounded-lg">
+                    <p class="mono text-xs text-[var(--c-primary)] mb-2">DELIVERABLES</p>
+                    <p class="text-sm text-[var(--c-text-mid)]">Assessment report · Roadmap options · ROI thesis · Security review · Data handling plan</p>
+                </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="story-section">
+                <h4>PHASE 2 · DESIGN</h4>
+                <div class="grid-2 mt-6">
+                    <div>
+                        <h5 class="text-xl font-bold text-white">Reference Architecture</h5>
+                        <p class="mt-2 text-sm text-[var(--c-text-mid)]">
+                            We design a target-state architecture with explicit trade-offs documented. Stack selection (Snowflake vs. Databricks, batch vs. streaming) grounded in your constraints, not vendor relationships.
+                        </p>
+                        <ul class="mt-3 space-y-1 text-sm text-[var(--c-text-mid)]">
+                            <li>• Logical + physical architecture diagrams</li>
+                            <li>• Interface contracts and data models</li>
+                            <li>• Security and access control design</li>
+                            <li>• Cost projection model (TCO over 3 years)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="text-xl font-bold text-white">Prototype & Validation</h5>
+                        <p class="mt-2 text-sm text-[var(--c-text-mid)]">
+                            Build small prototypes to validate critical unknowns: can we hit the latency target? Does the proposed feature store scale? Reduce risk before full build.
+                        </p>
+                        <div class="mt-4 code-block">
+                            <code class="text-xs">validation_spikes:
+  - Load test: 10K events/sec ingestion
+  - Query performance: complex join latency
+  - Cost simulation: 3-month projection
+  - Integration test: BI tool compatibility</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 p-4 bg-[var(--c-surface)] border border-[var(--c-border)] rounded-lg">
+                    <p class="mono text-xs text-[var(--c-primary)] mb-2">DELIVERABLES</p>
+                    <p class="text-sm text-[var(--c-text-mid)]">Architecture pack · Stack decision log · Prototype results · Executive readout · Go/no-go criteria</p>
+                </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="story-section">
+                <h4>PHASE 3 · DELIVER</h4>
+                <div class="grid-2 mt-6">
+                    <div>
+                        <h5 class="text-xl font-bold text-white">Iterative Build</h5>
+                        <p class="mt-2 text-sm text-[var(--c-text-mid)]">
+                            We build in two-week sprints with demos, automated testing, and integrated QA. Code lives in your repos. Backlogs live in your Jira. Full transparency, no vendor black box.
+                        </p>
+                        <ul class="mt-3 space-y-1 text-sm text-[var(--c-text-mid)]">
+                            <li>• Infrastructure-as-code (Terraform, CloudFormation)</li>
+                            <li>• CI/CD pipelines with automated tests</li>
+                            <li>• Data quality checks and lineage tracking</li>
+                            <li>• Recurring KPI dashboards and burn-down tracking</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="text-xl font-bold text-white">Observability & Cost Control</h5>
+                        <p class="mt-2 text-sm text-[var(--c-text-mid)]">
+                            Every pipeline, model, and dashboard ships with monitoring. Cost alerts, performance profiling, and data quality gates prevent surprises in production.
+                        </p>
+                        <div class="mt-4 code-block">
+                            <code class="text-xs">observability_standards:
+  - Datadog / Prometheus for infra metrics
+  - dbt tests for data quality (100% coverage)
+  - Monte Carlo for lineage + anomaly detection
+  - FinOps dashboards with budget alerts</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 p-4 bg-[var(--c-surface)] border border-[var(--c-border)] rounded-lg">
+                    <p class="mono text-xs text-[var(--c-primary)] mb-2">DELIVERABLES</p>
+                    <p class="text-sm text-[var(--c-text-mid)]">Production platform · IaC repos · CI/CD pipelines · Observability stack · Documentation wiki</p>
+                </div>
+            </div>
+
+            <!-- Phase 4 -->
+            <div class="story-section">
+                <h4>PHASE 4 · OPERATE</h4>
+                <div class="grid-2 mt-6">
+                    <div>
+                        <h5 class="text-xl font-bold text-white">Knowledge Transfer</h5>
+                        <p class="mt-2 text-sm text-[var(--c-text-mid)]">
+                            We don't just hand over code—we ensure your team can operate it. Training sessions, runbooks, office hours, and shadowing periods build internal capability.
+                        </p>
+                        <ul class="mt-3 space-y-1 text-sm text-[var(--c-text-mid)]">
+                            <li>• Runbooks for common operations and incidents</li>
+                            <li>• Video walkthroughs of critical workflows</li>
+                            <li>• Architectural decision records (ADRs)</li>
+                            <li>• Office hours during transition (4-6 weeks)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="text-xl font-bold text-white">Managed Operations Option</h5>
+                        <p class="mt-2 text-sm text-[var(--c-text-mid)]">
+                            If you prefer, we can operate the platform as a managed service: 24/7 monitoring, incident response, optimization, and continuous improvement.
+                        </p>
+                        <div class="mt-4 code-block">
+                            <code class="text-xs">managed_ops_slas:
+  - 24/7 on-call + incident response
+  - Monthly health reports + optimization reviews
+  - Quarterly roadmap updates
+  - Proactive cost management</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 p-4 bg-[var(--c-surface)] border border-[var(--c-border)] rounded-lg">
+                    <p class="mono text-xs text-[var(--c-primary)] mb-2">DELIVERABLES</p>
+                    <p class="text-sm text-[var(--c-text-mid)]">Runbooks · Training materials · ADRs · Transition plan · Optional: Managed ops contract</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- What Makes Us Different -->
+    <div class="space-y-8">
+        <div class="text-center max-w-3xl mx-auto">
+            <p class="section-label">DIFFERENTIATION</p>
+            <h3 class="text-3xl font-bold text-white mt-4">Why Choose Bytewise?</h3>
         </div>
         <div class="card">
-            <div class="text-5xl font-extrabold text-[var(--c-primary)] mb-3">02</div>
-            <h3 class="text-2xl font-bold text-white">Design & Validation</h3>
-            <p class="mt-2">Data models, interface contracts, POCs or prototypes where uncertainty is high. Early observability scaffolds established.</p>
+            <table class="detail-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Dimension</th>
+                        <th scope="col">Traditional SI / Offshore</th>
+                        <th scope="col">Boutique Agency</th>
+                        <th scope="col">Bytewise (Engineering Consultancy)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Technical Depth</strong></td>
+                        <td>Junior engineers, ticket-driven</td>
+                        <td>Senior IC-level, hands-on</td>
+                        <td><strong>Principal architects + senior engineers; C-suite advisory available</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Advisory vs. Execution</strong></td>
+                        <td>Execution-only (no strategy)</td>
+                        <td>Mostly execution, light strategy</td>
+                        <td><strong>Integrated: Strategic design + hands-on build</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Knowledge Transfer</strong></td>
+                        <td>Minimal (dependency by design)</td>
+                        <td>Ad-hoc documentation</td>
+                        <td><strong>Structured: Runbooks, training, office hours</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Engagement Flexibility</strong></td>
+                        <td>Long-term contracts, rigid SOWs</td>
+                        <td>Project-based, some flexibility</td>
+                        <td><strong>Adaptive: Retainer, embedded, or project models</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vendor Neutrality</strong></td>
+                        <td>Often vendor-biased (partnerships)</td>
+                        <td>Tool-agnostic but limited depth</td>
+                        <td><strong>Vendor-neutral by design; IaC portability validated</strong></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <div class="card">
-            <div class="text-5xl font-extrabold text-[var(--c-primary)] mb-3">03</div>
-            <h3 class="text-2xl font-bold text-white">Incremental Build</h3>
-            <p class="mt-2">Two-week delivery cycles with integrated QA, code review, performance profiling, and model drift checks.</p>
+    </div>
+
+    <!-- Technical Standards -->
+    <div class="space-y-8">
+        <div class="text-center max-w-3xl mx-auto">
+            <p class="section-label">QUALITY ASSURANCE</p>
+            <h3 class="text-3xl font-bold text-white mt-4">How We Ensure Quality</h3>
         </div>
-        <div class="card">
-            <div class="text-5xl font-extrabold text-[var(--c-primary)] mb-3">04</div>
-            <h3 class="text-2xl font-bold text-white">Launch & Scale</h3>
-            <p class="mt-2">Hardening, failover rehearsals, capacity tuning, continuous optimization, and enablement for in-house teams.</p>
+        <div class="grid-2">
+            <div class="card">
+                <h4 class="text-xl font-bold text-white">Code Review Process</h4>
+                <p class="mt-3 text-sm text-[var(--c-text-mid)]">
+                    Every pull request reviewed by a senior engineer or architect. No code ships without tests, documentation, and approval.
+                </p>
+                <div class="mt-4 code-block">
+                    <code class="text-xs">pr_checklist:
+  - [ ] Unit tests (>80% coverage)
+  - [ ] Integration tests
+  - [ ] Documentation updated
+  - [ ] Security review (if data model changes)
+  - [ ] Performance profiling (if query changes)</code>
+                </div>
+            </div>
+            <div class="card">
+                <h4 class="text-xl font-bold text-white">Architecture Governance</h4>
+                <p class="mt-3 text-sm text-[var(--c-text-mid)]">
+                    Major design decisions documented in Architecture Decision Records (ADRs). Rationale, alternatives considered, trade-offs explicit.
+                </p>
+                <div class="mt-4 code-block">
+                    <code class="text-xs">adr_template:
+  title: "Use Delta Lake over Iceberg"
+  status: Accepted
+  context: Need ACID transactions, time travel
+  decision: Delta Lake (better Databricks integration)
+  consequences: Vendor lock-in risk mitigated by...</code>
+                </div>
+            </div>
+            <div class="card">
+                <h4 class="text-xl font-bold text-white">Security & Compliance Gates</h4>
+                <p class="mt-3 text-sm text-[var(--c-text-mid)]">
+                    Every architecture reviewed against SOC2, GDPR, HIPAA requirements (as applicable). Threat models updated with each phase.
+                </p>
+                <ul class="mt-3 space-y-1 text-sm text-[var(--c-text-mid)]">
+                    <li>• Data classification and access controls</li>
+                    <li>• Encryption at rest and in transit</li>
+                    <li>• Audit logging for all data access</li>
+                    <li>• Regular penetration testing</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4 class="text-xl font-bold text-white">Cost Optimization</h4>
+                <p class="mt-3 text-sm text-[var(--c-text-mid)]">
+                    FinOps reviews every sprint. Query optimization, storage tiering, compute rightsizing to prevent cloud cost surprises.
+                </p>
+                <ul class="mt-3 space-y-1 text-sm text-[var(--c-text-mid)]">
+                    <li>• Cost dashboards with budget alerts</li>
+                    <li>• Automated shutdown of idle resources</li>
+                    <li>• Query performance profiling</li>
+                    <li>• Storage lifecycle policies</li>
+                </ul>
+            </div>
         </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="glass p-10 text-center">
+        <h3 class="text-3xl font-bold text-white">Ready to see how we'd approach your platform?</h3>
+        <p class="mt-4 text-[var(--c-text-mid)] max-w-2xl mx-auto">
+            Schedule a 30-minute architecture review with one of our principal architects. We'll discuss your challenges, constraints, and potential paths forward—no sales pitch.
+        </p>
+        <a href="#contact" class="btn mt-8">Schedule Architecture Review</a>
     </div>
 </section>
