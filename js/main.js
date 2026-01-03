@@ -9,9 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const pageMap = {
             overview: 'home',
             home: 'home',
+            engage: 'home',
             about: 'about',
             approach: 'approach',
             services: 'services',
+            services2: 'services',
             capabilities: 'capabilities',
             work: 'work',
             'success-stories': 'work',
@@ -30,9 +32,14 @@ document.addEventListener('DOMContentLoaded', () => {
             
               mainContent.innerHTML = content;
               enhanceDynamicContent();
-            if (window.location.hash !== '#contact') {
-                 window.scrollTo({ top: 0, behavior: 'instant' });
-            }
+                        if (pageId === 'engage') {
+                            const engageSection = document.getElementById('engage');
+                            if (engageSection) {
+                                engageSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                        } else if (window.location.hash !== '#contact') {
+                             window.scrollTo({ top: 0, behavior: 'instant' });
+                        }
             updateActiveNav(validPageId);
 
         } catch (error) {
@@ -67,18 +74,35 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Mobile Menu ---
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobile-menu');
-    menuBtn.addEventListener('click', () => {
-        const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
-        menuBtn.setAttribute('aria-expanded', String(!isExpanded));
-        mobileMenu.style.maxHeight = isExpanded ? null : `${mobileMenu.scrollHeight}px`;
-    });
 
-    mobileMenu.addEventListener('click', e => {
-        if (e.target.matches('a.nav-link')) {
-            mobileMenu.style.maxHeight = null;
-            menuBtn.setAttribute('aria-expanded', 'false');
-        }
-    });
+    const closeMobileMenu = () => {
+        if (!mobileMenu) return;
+        mobileMenu.classList.remove('is-open');
+        menuBtn?.setAttribute('aria-expanded', 'false');
+    };
+
+    const toggleMobileMenu = () => {
+        if (!menuBtn || !mobileMenu) return;
+        const shouldOpen = !mobileMenu.classList.contains('is-open');
+        mobileMenu.classList.toggle('is-open', shouldOpen);
+        menuBtn.setAttribute('aria-expanded', String(shouldOpen));
+    };
+
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', toggleMobileMenu);
+
+        mobileMenu.addEventListener('click', e => {
+            if (e.target.matches('a.nav-link')) {
+                closeMobileMenu();
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1024) {
+                closeMobileMenu();
+            }
+        });
+    }
 
     // --- Dynamic content enhancers (forms, anchor helpers) ---
     function enhanceDynamicContent() {
@@ -198,8 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // If in mobile menu, also close the menu
             if (mobileMenu && mobileMenu.contains(contactLink)) {
-                mobileMenu.style.maxHeight = null;
-                menuBtn.setAttribute('aria-expanded', 'false');
+                closeMobileMenu();
             }
         }
     });

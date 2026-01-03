@@ -73,7 +73,7 @@
                 <span class="mono text-[var(--c-text-low)]">24/7 Critical Support Line</span>
                 <a href="tel:+18775550123" class="text-white font-semibold">+1 (877) 555-0123</a>
                 <span class="hidden md:inline text-[var(--c-text-low)]">|</span>
-                <a href="mailto:hello@bytewiseltd.com" class="text-white">hello@bytewiseltd.com</a>
+                <a href="mailto:hello@bytewiseltd.com" class="text-white">team@bytewiseltd.com</a>
             </div>
             <div class="flex flex-wrap items-center gap-3">
                 <span class="badge">SOC2 Type II</span>
@@ -88,37 +88,43 @@
             <a href="#home" class="flex items-center gap-3 group">
                 <svg class="h-9 w-9" viewBox="0 0 42 40" fill="none" aria-hidden="true">
                     <path d="M21.5 12.5L10 19.25V32.75L21.5 26L33 19.25V5.75L21.5 12.5Z" stroke="var(--c-primary)" stroke-width="3"/>
-                    <path d="M10 19.25L21.5 26L33 19.25" stroke="#FFFFFF" stroke-width="3"/>
-                    <path d="M21.5 12.5V26" stroke="#FFFFFF" stroke-width="3"/>
+                    <path d="M10 19.25L21.5 26L33 19.25" stroke="var(--c-text-high)" stroke-width="3"/>
+                    <path d="M21.5 12.5V26" stroke="var(--c-text-high)" stroke-width="3"/>
                 </svg>
-                <span class="text-xl font-extrabold tracking-tight text-white">Bytewise</span>
+                <span class="text-xl font-extrabold tracking-tight text-[var(--c-text-high)]">Bytewise</span>
             </a>
-            <div class="hidden md:flex items-center gap-8 text-sm">
-                <a class="nav-link" href="#home">Overview</a>
+            <div class="hidden lg:flex items-center gap-8 text-sm">
+                <!-- <a class="nav-link" href="#home">Overview</a> -->
                 <a class="nav-link" href="#approach">Approach</a>
                 <a class="nav-link" href="#services">Services</a>
                 <a class="nav-link" href="#work">Work</a>
                 <a class="nav-link" href="#insights">Insights</a>
-                <a class="nav-link" href="#contact">Contact</a>
+                <button class="theme-toggle-btn text-[var(--c-text-high)] p-2 rounded-full hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--c-primary)]" aria-label="Toggle theme">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun-icon"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon-icon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
             </div>
             <div class="flex items-center gap-4">
-                <a href="#contact" class="btn hidden md:inline-flex text-sm">Schedule Review</a>
-                <button id="menuBtn" class="md:hidden text-white p-2 rounded-lg hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--c-primary)]" aria-label="Toggle navigation" aria-expanded="false">
+                <button class="theme-toggle-btn lg:hidden text-[var(--c-text-high)] p-2 rounded-full hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--c-primary)]" aria-label="Toggle theme">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun-icon"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon-icon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <a href="#contact" class="btn hidden lg:inline-flex text-sm">GET IN TOUCH</a>
+                <button id="menuBtn" class="lg:hidden text-[var(--c-text-high)] p-2 rounded-lg hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--c-primary)]" aria-label="Toggle navigation" aria-expanded="false">
                     <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                         <path class="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/>
                     </svg>
                 </button>
             </div>
         </nav>
-        <div id="mobile-menu" class="md:hidden px-6 pt-0 pb-6 space-y-4">
-            <div class="flex flex-col gap-3 font-medium">
-                <a class="nav-link" href="#home">Overview</a>
+        <div id="mobile-menu" class="lg:hidden px-6 pt-0 pb-6 space-y-4">
+            <div class="flex flex-col items-center text-center gap-3 font-medium">
                 <a class="nav-link" href="#approach">Approach</a>
                 <a class="nav-link" href="#services">Services</a>
                 <a class="nav-link" href="#work">Work</a>
                 <a class="nav-link" href="#insights">Insights</a>
-                <a class="btn mt-2" href="#contact">Schedule Review</a>
             </div>
+            <a href="#contact" class="btn w-full justify-center text-sm">GET IN TOUCH</a>
         </div>
     </header>
 
@@ -137,10 +143,10 @@
                     <a href="#home" class="flex items-center gap-3 group">
                         <svg class="h-9 w-9" viewBox="0 0 42 40" fill="none" aria-hidden="true">
                             <path d="M21.5 12.5L10 19.25V32.75L21.5 26L33 19.25V5.75L21.5 12.5Z" stroke="var(--c-primary)" stroke-width="3"/>
-                            <path d="M10 19.25L21.5 26L33 19.25" stroke="#FFFFFF" stroke-width="3"/>
-                            <path d="M21.5 12.5V26" stroke="#FFFFFF" stroke-width="3"/>
+                            <path d="M10 19.25L21.5 26L33 19.25" stroke="var(--c-text-high)" stroke-width="3"/>
+                            <path d="M21.5 12.5V26" stroke="var(--c-text-high)" stroke-width="3"/>
                         </svg>
-                        <span class="text-xl font-extrabold tracking-tight text-white">Bytewise</span>
+                        <span class="text-xl font-extrabold tracking-tight text-[var(--c-text-high)]">Bytewise</span>
                     </a>
                     <p class="mt-4 text-sm max-w-sm leading-relaxed">
                         We help regulated enterprises modernize data foundations, ship production AI, and stand up observability-backed operations.
@@ -152,37 +158,40 @@
                     </div>
                 </div>
 
+                
+
                 <div>
-                    <h3 class="text-sm font-semibold tracking-wider uppercase text-white mb-4">Navigation</h3>
+                    <h3 class="text-sm font-semibold tracking-wider uppercase text-white mb-4">Company</h3>
                     <ul class="space-y-3 text-sm">
                         <li><a class="hover:text-white transition" href="#home">Overview</a></li>
-                        <li><a class="hover:text-white transition" href="#solutions">Solutions</a></li>
-                        <li><a class="hover:text-white transition" href="#process">Process</a></li>
-                        <li><a class="hover:text-white transition" href="#proof">Proof</a></li>
+                        <li><a class="hover:text-white transition" href="#about">About Us</a></li>
+                        <li><a class="hover:text-[var(--c-text-high)] transition" href="#approach">Process</a></li>
+                        <li><a class="hover:text-white transition" href="#careers">Careers</a></li>
+                        <li><a class="hover:text-white transition" href="#contact">Contact</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3 class="text-sm font-semibold tracking-wider uppercase text-white mb-4">Resources</h3>
+                    <h3 class="text-sm font-semibold tracking-wider uppercase text-[var(--c-text-high)] mb-4">Resources</h3>
                     <ul class="space-y-3 text-sm">
-                        <li><a class="hover:text-white transition" href="#capabilities">Capability Deep Dive</a></li>
-                        <li><a class="hover:text-white transition" href="#insights">Insights Library</a></li>
-                        <li><a class="hover:text-white transition" href="#proof">Case Outcomes</a></li>
-                        <li><a class="hover:text-white transition" href="#engage">Engagement Models</a></li>
+                        <li><a class="hover:text-[var(--c-text-high)] transition" href="#capabilities">Capability Deep Dive</a></li>
+                        <li><a class="hover:text-[var(--c-text-high)] transition" href="#insights">Insights Library</a></li>
+                        <li><a class="hover:text-[var(--c-text-high)] transition" href="#work">Case Outcomes</a></li>
+                        <li><a class="hover:text-[var(--c-text-high)] transition" href="#engage">Engagement Models</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3 class="text-sm font-semibold tracking-wider uppercase text-white mb-4">Contact</h3>
+                    <h3 class="text-sm font-semibold tracking-wider uppercase text-[var(--c-text-high)] mb-4">Contact</h3>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="tel:+18775550123" class="hover:text-white transition">+1 (877) 555-0123</a></li>
-                        <li><a href="mailto:hello@bytewiseltd.com" class="hover:text-white transition">hello@bytewiseltd.com</a></li>
-                        <li><a class="hover:text-white transition" href="#contact">Book Architecture Review</a></li>
+                        <li><a href="tel:+18775550123" class="hover:text-[var(--c-text-high)] transition">+1 (877) 555-0123</a></li>
+                        <li><a href="mailto:hello@bytewiseltd.com" class="hover:text-[var(--c-text-high)] transition">hello@bytewiseltd.com</a></li>
+                        <li><a class="hover:text-[var(--c-text-high)] transition" href="#contact">Book Architecture Review</a></li>
                     </ul>
                 </div>
 
                 <div class="col-span-2 md:col-span-1 lg:col-span-1">
-                    <h3 class="text-sm font-semibold tracking-wider uppercase text-white mb-4">Office</h3>
+                    <h3 class="text-sm font-semibold tracking-wider uppercase text-[var(--c-text-high)] mb-4">Office</h3>
                     <p class="text-sm">Global delivery with pods across North America and EMEA. Secure client spaces available on request.</p>
                     <a href="#contact" class="btn text-xs mt-4">Send RFP / NDA</a>
                 </div>
@@ -190,7 +199,7 @@
 
             <div class="mt-16 sep"></div>
             <div class="mt-10 text-center text-sm text-[var(--c-text-low)]">
-                <p>&copy; 2025 Bytewise Limited. All rights reserved.</p>
+                <p>&copy; 2026 Bytewise Limited. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -199,30 +208,30 @@
         <div id="contact-modal" class="contact-modal glass">
             <button id="modal-close-btn" class="modal-close-btn" aria-label="Close modal">&times;</button>
             
-            <h2 id="modal-title" class="text-3xl font-bold text-white">Start a Conversation</h2>
+            <h2 id="modal-title" class="text-3xl font-bold text-[var(--c-text-high)]">Start a Conversation</h2>
             <p class="mt-4 max-w-md leading-relaxed text-[var(--c-text-mid)]">
                 Have a critical initiative, platform modernization, or ML use case in scope? Send context—our architecture team will engage quickly.
             </p>
             <ul class="mt-6 mb-8 space-y-3 text-sm text-[var(--c-text-low)]">
-                <li><span class="text-white font-medium">Response Time:</span> Under 1 business day</li>
-                <li><span class="text-white font-medium">Engagement Models:</span> Project · Embedded · Advisory</li>
+                <li><span class="text-[var(--c-text-high)] font-medium">Response Time:</span> Under 1 business day</li>
+                <li><span class="text-[var(--c-text-high)] font-medium">Engagement Models:</span> Project · Embedded · Advisory</li>
             </ul>
 
             <form id="modal-contact-form" class="space-y-5" novalidate>
                 <div>
                     <label class="block mb-2 text-xs font-semibold tracking-wide uppercase text-[var(--c-text-low)]" for="modal-fullName">Full Name</label>
                     <input id="modal-fullName" name="name" type="text" required autocomplete="name"
-                           class="w-full p-3.5 rounded-lg bg-black/25 border border-[var(--c-border)] text-sm text-white placeholder:text-[var(--c-text-low)] focus:outline-none focus:border-[var(--c-primary)] transition">
+                           class="w-full p-3.5 rounded-lg bg-black/25 border border-[var(--c-border)] text-sm text-[var(--c-text-high)] placeholder:text-[var(--c-text-low)] focus:outline-none focus:border-[var(--c-primary)] transition">
                 </div>
                 <div>
                     <label class="block mb-2 text-xs font-semibold tracking-wide uppercase text-[var(--c-text-low)]" for="modal-email">Work Email</label>
                     <input id="modal-email" name="email" type="email" required autocomplete="email"
-                           class="w-full p-3.5 rounded-lg bg-black/25 border border-[var(--c-border)] text-sm text-white placeholder:text-[var(--c-text-low)] focus:outline-none focus:border-[var(--c-primary)] transition">
+                           class="w-full p-3.5 rounded-lg bg-black/25 border border-[var(--c-border)] text-sm text-[var(--c-text-high)] placeholder:text-[var(--c-text-low)] focus:outline-none focus:border-[var(--c-primary)] transition">
                 </div>
                 <div>
                     <label class="block mb-2 text-xs font-semibold tracking-wide uppercase text-[var(--c-text-low)]" for="modal-initiative">Initiative Type</label>
                     <select id="modal-initiative" name="initiative" required
-                        class="w-full p-3.5 rounded-lg bg-black/25 border border-[var(--c-border)] text-sm text-white focus:outline-none focus:border-[var(--c-primary)] transition">
+                        class="w-full p-3.5 rounded-lg bg-black/25 border border-[var(--c-border)] text-sm text-[var(--c-text-high)] focus:outline-none focus:border-[var(--c-primary)] transition">
                         <option value="" disabled selected>Select an initiative</option>
                         <option>Platform Modernization</option>
                         <option>Applied AI / MLOps</option>
@@ -234,7 +243,7 @@
                 <div>
                     <label class="block mb-2 text-xs font-semibold tracking-wide uppercase text-[var(--c-text-low)]" for="modal-timeline">Urgency</label>
                     <select id="modal-timeline" name="timeline" required
-                        class="w-full p-3.5 rounded-lg bg-black/25 border border-[var(--c-border)] text-sm text-white focus:outline-none focus:border-[var(--c-primary)] transition">
+                        class="w-full p-3.5 rounded-lg bg-black/25 border border-[var(--c-border)] text-sm text-[var(--c-text-high)] focus:outline-none focus:border-[var(--c-primary)] transition">
                         <option value="" disabled selected>When do you need help?</option>
                         <option>Immediate (active incident or project)</option>
                         <option>Near-term (approvals in motion)</option>
@@ -245,7 +254,7 @@
                 <div>
                     <label class="block mb-2 text-xs font-semibold tracking-wide uppercase text-[var(--c-text-low)]" for="modal-context">Project Context</label>
                     <textarea id="modal-context" name="context" rows="4" required
-                        class="w-full p-3.5 rounded-lg bg-black/25 border border-[var(--c-border)] text-sm resize-y text-white placeholder:text-[var(--c-text-low)] focus:outline-none focus:border-[var(--c-primary)] transition"
+                        class="w-full p-3.5 rounded-lg bg-black/25 border border-[var(--c-border)] text-sm resize-y text-[var(--c-text-high)] placeholder:text-[var(--c-text-low)] focus:outline-none focus:border-[var(--c-primary)] transition"
                         placeholder="Briefly describe goals, constraints, timelines..."></textarea>
                 </div>
                 <button type="submit" class="btn w-full" id="modal-contactSubmit">Submit Inquiry</button>
@@ -255,5 +264,6 @@
     </div>
 
     <script src="js/main.js"></script>
+    <script src="js/theme.js" defer></script>
 </body>
 </html>

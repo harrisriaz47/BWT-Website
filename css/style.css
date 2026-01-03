@@ -5,7 +5,8 @@
     --c-text-high: #fafafa;
     --c-text-mid: #a1a1a1;
     --c-text-low: #525252;
-    --c-primary: #b02a37;
+    --c-primary:#8f0909;
+    /* --c-primary: #b02a37; */
     --c-secondary: #8b5cf6;
     --c-success: #10b981;
     --c-error: #ef4444;
@@ -17,10 +18,46 @@
     --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
     --font-body-size: 15px;
 }
+
+body.light-mode {
+    --c-bg: #f9fafb;
+    --c-surface: rgba(229, 231, 235, 0.55);
+    --c-border: rgba(0, 0, 0, 0.08);
+    --c-text-high: #1f2937;
+    --c-text-mid: #4b5563;
+    --c-text-low: #9ca3af;
+    --c-primary: #8f0909;
+}
+
+/* Light mode: make headings/subheadings readable (keep home hero gradient untouched) */
+body.light-mode h1:not(.hero-gradient),
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode h6 {
+    color: var(--c-text-high);
+}
+
+/* Override Tailwind-style explicit white text on headings in light mode */
+body.light-mode h1.text-white:not(.hero-gradient),
+body.light-mode h2.text-white,
+body.light-mode h3.text-white,
+body.light-mode h4.text-white,
+body.light-mode h5.text-white,
+body.light-mode h6.text-white {
+    color: var(--c-text-high);
+}
+
+/* Some pages use Tailwind `text-white` on subheading-like elements (e.g. <strong>). */
+body.light-mode #main-content :is(h1,h2,h3,h4,h5,h6,strong).text-white {
+    color: var(--c-text-high) !important;
+}
+
 * { box-sizing: border-box; }
 body {
     margin:0;
-    background: radial-gradient(circle at 15% 20%, #0f1419 0%, #0a0a0a 50%) fixed;
+    background: var(--c-bg);
     font-family: var(--font-body);
     font-size: var(--font-body-size);
     color: var(--c-text-mid);
@@ -34,6 +71,12 @@ body {
         radial-gradient(circle at 85% 78%, rgba(139,92,246,0.12), transparent 60%);
     filter: blur(120px) saturate(120%);
     animation: drift 28s ease-in-out infinite alternate;
+}
+body.light-mode .aurora {
+    background:
+        radial-gradient(circle at 12% 25%, rgba(14, 165, 233, 0.2), transparent 60%),
+        radial-gradient(circle at 85% 78%, rgba(139, 92, 246, 0.15), transparent 65%);
+    filter: blur(100px) saturate(100%);
 }
 @keyframes drift {
     0% { transform: scale(1) translateY(0); }
@@ -77,6 +120,17 @@ body {
 }
 .btn::after { display:none; }
 .btn:hover { transform:translateY(-2px); }
+
+.theme-toggle-btn .sun-icon,
+body.light-mode .theme-toggle-btn .moon-icon {
+    display: block;
+}
+
+.theme-toggle-btn .moon-icon,
+body.light-mode .theme-toggle-btn .sun-icon {
+    display: none;
+}
+
 .nav-link {
     position:relative; font-weight:600; color:var(--c-text-mid); padding:.25rem .5rem;
     transition:color .25s;
@@ -107,7 +161,31 @@ body {
     from { opacity:0; transform:translateY(12px); }
     to { opacity:1; transform:translateY(0); }
 }
-#mobile-menu { max-height:0; overflow:hidden; transition:max-height .5s ease; }
+#mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .35s ease;
+    /* Prevent collapsed menu from leaving blank space (Tailwind padding still applies). */
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+#mobile-menu.is-open {
+    max-height: 80vh;
+    overflow: auto;
+    padding-top: 0 !important;
+    padding-bottom: 1.5rem !important;
+}
+/* Explicit responsive controls for nav visibility */
+header nav .nav-desktop { display: none !important; }
+@media (min-width: 1024px) {
+    header nav .nav-desktop { display: flex !important; }
+}
+.nav-mobile-toggle { display: inline-flex !important; }
+@media (min-width: 1024px) {
+    .nav-mobile-toggle { display: none !important; }
+    #mobile-menu { display: none !important; }
+}
 /* Utility overrides */
 .mono { 
     font-family: var(--font-mono);
@@ -133,6 +211,11 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .utility-bar {
     background: rgba(5,5,5,0.85);
     border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Keep 'Schedule a Call →' visible in both themes (utility bar stays dark). */
+.utility-bar .link-underline {
+    color: #fff;
 }
 .badge {
     display:inline-flex;
@@ -166,7 +249,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     color:var(--c-text-mid);
 }
 .link-underline {
-    color:#fff;
+    color:var(--c-text-high);
     position:relative;
 }
 .link-underline::after {
@@ -226,7 +309,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     --btn-bg: transparent;
     background:transparent;
     border:1px solid rgba(255,255,255,0.35);
-    color:#fff;
+    color:var(--c-text-high);
 }
 
 .pain-outcome { display:grid; gap:2rem; }
@@ -234,14 +317,56 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .divider { width:100%; height:1px; background:rgba(255,255,255,0.08); margin:1rem 0; }
 
 .logo-band { text-align:center; }
-.logo-grid {
-    margin-top:1.5rem;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-    gap:1rem;
-    text-transform:uppercase;
-    letter-spacing:.1em;
-    color:var(--c-text-low);
+
+.logo-marquee {
+    margin-top: 1.5rem;
+    overflow: hidden;
+}
+
+.logo-track {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    width: max-content;
+    animation: logo-marquee 26s linear infinite;
+}
+
+.logo-set {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.logo-item {
+    flex: 0 0 auto;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .4rem;
+    white-space: nowrap;
+}
+
+.logo-img {
+    height: 34px;
+    width: auto;
+    max-width: 160px;
+    opacity: .9;
+}
+
+.logo-name {
+    font-size: .7rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--c-text-low);
+}
+
+@keyframes logo-marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logo-track { animation: none !important; }
 }
 
 .lead-magnet {
@@ -260,14 +385,14 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     border-radius:0.9rem;
     border:1px solid var(--c-border);
     background:rgba(255,255,255,0.02);
-    color:#fff;
+    color:var(--c-text-high);
 }
 .magnet-form input::placeholder {
     color:var(--c-text-low);
 }
 .magnet-form select {
     appearance:none;
-    color:#fff;
+    color:var(--c-text-high);
 }
 .magnet-form select:invalid {
     color:var(--c-text-low);
@@ -347,6 +472,18 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     margin-top:.35rem;
     color:var(--c-text-mid);
 }
+
+.table-responsive {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive .detail-table {
+    min-width: 860px;
+}
+
 .detail-table {
     width:100%;
     border-collapse:separate;
@@ -376,6 +513,13 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 }
 .detail-table tr:last-child td {
     border-bottom:none;
+}
+
+@media (max-width: 640px) {
+    .detail-table th,
+    .detail-table td {
+        padding: .75rem .9rem;
+    }
 }
 .noscript-warning {
     background:#2c090f;
@@ -420,7 +564,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 
 .case-grid { display:grid; gap:1.5rem; }
 .case-card { border:1px solid var(--c-border); border-radius:var(--radii); padding:2rem; background:rgba(255,255,255,0.01); }
-.case-card h3 { color:#fff; font-size:1.5rem; margin:0.5rem 0 1rem; }
+.case-card h3 { color:var(--c-text-high); font-size:1.5rem; margin:0.5rem 0 1rem; }
 .case-columns { display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); font-size:.9rem; color:var(--c-text-mid); }
 
 .testimonial-grid { display:grid; gap:1.25rem; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
@@ -572,6 +716,10 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     font-weight: 600;
 }
 
+body.light-mode .decision-node strong {
+    color: var(--c-text-high);
+}
+
 /* NEW: Contact Modal Styles */
 .contact-overlay {
     display: none;
@@ -616,4 +764,11 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     color: var(--c-text-high);
     background: var(--c-border);
     transform: scale(1.1);
+}
+
+#theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
 }

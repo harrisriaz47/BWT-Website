@@ -147,45 +147,458 @@
 
     <!-- Services Summary -->
     <div class="space-y-8">
-        <div class="text-center max-w-3xl mx-auto">
-            <p class="section-label">HOW WE PARTNER</p>
-            <h2 class="section-title mt-4">Services Built for Every Stage</h2>
-            <p class="section-lede mx-auto mt-4">From strategic roadmapping to hands-on platform engineering to 24/7 managed operations.</p>
+        <section id="services" class="py-24 space-y-20">
+    <!-- Hero -->
+    <div class="max-w-4xl mx-auto text-center">
+        <p class="section-label">SERVICES</p>
+        <h2 class="text-4xl md:text-5xl font-bold text-white mt-4">Services Built for Every Stage of Data Maturity</h2>
+        <p class="mt-6 text-lg text-[var(--c-text-mid)] max-w-3xl mx-auto">
+            From strategic roadmapping to hands-on platform engineering to 24/7 managed operations. Choose the engagement model that fits your needs.
+        </p>
+    </div>
+
+    <!-- Tier 1: Strategic Advisory (Premium) -->
+    <div class="space-y-6">
+        <div class="text-center">
+            <span class="service-tier service-tier--premium">TIER 1 · PREMIUM</span>
         </div>
+        <div class="card card--elevated p-10">
+            <div class="text-center max-w-3xl mx-auto mb-8">
+                <h3 class="text-3xl font-bold text-white">Strategic Advisory</h3>
+                <p class="mt-3 text-lg text-[var(--c-text-mid)]">Fractional CDO, architecture council, and investment diligence for CTOs and boards navigating modernization.</p>
+            </div>
+            
+            <div class="grid-2 gap-6">
+                <div>
+                    <h4 class="text-xl font-bold text-white">When You Need This</h4>
+                    <ul class="mt-3 space-y-2 text-sm text-[var(--c-text-mid)]">
+                        <li>• Board or C-suite asking: "Should we modernize our data platform?"</li>
+                        <li>• Multiple vendor pitches, unclear which path is right</li>
+                        <li>• Need to build data team capability from scratch</li>
+                        <li>• Existing platform failing but unclear why</li>
+                        <li>• M&A due diligence on data/AI capabilities</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-white">What You Get</h4>
+                    <ul class="mt-3 space-y-2 text-sm text-[var(--c-text-mid)]">
+                        <li>• Strategic roadmap aligned to business priorities</li>
+                        <li>• Build vs. buy vs. outsource recommendations</li>
+                        <li>• Vendor selection and RFP support</li>
+                        <li>• Organization design and hiring plans</li>
+                        <li>• Board-ready business cases and ROI models</li>
+                        <li>• Architecture reviews and technical audits</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-8 p-6 bg-[var(--c-surface)] border border-[var(--c-border)] rounded-lg">
+                <div class="grid-3 gap-6">
+                    <div>
+                        <p class="mono text-xs text-[var(--c-primary)] mb-2">TEAM</p>
+                        <p class="text-sm text-[var(--c-text-mid)]">Principal Architect or former CDO, backed by solution SMEs as needed</p>
+                    </div>
+                    <div>
+                        <p class="mono text-xs text-[var(--c-primary)] mb-2">ENGAGEMENT MODEL</p>
+                        <p class="text-sm text-[var(--c-text-mid)]">Retainer (flexible hours) or project-based workshops</p>
+                    </div>
+                    <div>
+                        <p class="mono text-xs text-[var(--c-primary)] mb-2">TYPICAL DURATION</p>
+                        <p class="text-sm text-[var(--c-text-mid)]">3-6 months for strategic initiatives; ongoing for fractional CDO</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 text-center">
+                <a href="#contact" class="btn">Schedule Executive Briefing</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tier 2: Platform Engineering (Core) -->
+    <div class="space-y-6">
+        <div class="text-center">
+            <span class="service-tier service-tier--core">TIER 2 · CORE</span>
+        </div>
+        <div class="space-y-10">
+            <!-- Data Platform Modernization -->
+            <div class="card p-8">
+                <span class="badge badge--primary">Platform Engineering</span>
+                <h3 class="text-2xl font-bold text-white mt-4">Data Platform Modernization</h3>
+                <p class="mt-3 text-[var(--c-text-mid)]">
+                    Build or modernize a lakehouse/warehouse with reproducible IaC, dbt models, and automated governance. We design for scale, cost-efficiency, and vendor portability.
+                </p>
+                
+                <div class="grid-2 gap-6 mt-6">
+                    <div>
+                        <h5 class="text-sm font-bold text-white mono">USE CASES</h5>
+                        <ul class="mt-2 space-y-1 text-sm text-[var(--c-text-mid)]">
+                            <li>• Legacy warehouse migration (Oracle, Teradata → Cloud)</li>
+                            <li>• Lakehouse consolidation (Databricks, Snowflake, BigQuery)</li>
+                            <li>• Data mesh implementation with domain ownership</li>
+                            <li>• Real-time streaming pipelines (Kafka, Kinesis)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="text-sm font-bold text-white mono">STACK FOCUS</h5>
+                        <p class="mt-2 text-sm text-[var(--c-text-mid)]">Snowflake · Databricks · BigQuery · dbt · Airflow · Terraform · Great Expectations · Monte Carlo</p>
+                    </div>
+                </div>
+
+                <div class="mt-6 p-4 bg-[var(--c-surface)] border border-[var(--c-border)] rounded-lg">
+                    <div class="grid-3 gap-4">
+                        <div>
+                            <p class="mono text-xs text-[var(--c-primary)]">TEAM</p>
+                            <p class="text-xs text-[var(--c-text-mid)]">Lead Platform Architect + 2 Senior Data Engineers + DataOps</p>
+                        </div>
+                        <div>
+                            <p class="mono text-xs text-[var(--c-primary)]">DELIVERABLES</p>
+                            <p class="text-xs text-[var(--c-text-mid)]">IaC repo, lineage + cost dashboard, SLO matrix, runbooks</p>
+                        </div>
+                        <div>
+                            <p class="mono text-xs text-[var(--c-primary)]">TIMELINE</p>
+                            <p class="text-xs text-[var(--c-text-mid)]">Discovery → Design → Build → Transition (4-6 months typical)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Applied AI & MLOps -->
+            <div class="card p-8">
+                <span class="badge badge--primary">Platform Engineering</span>
+                <h3 class="text-2xl font-bold text-white mt-4">Applied AI & MLOps</h3>
+                <p class="mt-3 text-[var(--c-text-mid)]">
+                    Productionize ML models or LLM-powered workflows with automated testing, feature stores, and drift detection. Move from notebook experiments to production systems.
+                </p>
+                
+                <div class="grid-2 gap-6 mt-6">
+                    <div>
+                        <h5 class="text-sm font-bold text-white mono">USE CASES</h5>
+                        <ul class="mt-2 space-y-1 text-sm text-[var(--c-text-mid)]">
+                            <li>• Predictive models (churn, fraud, forecasting)</li>
+                            <li>• LLM integration for enterprises (RAG, fine-tuning)</li>
+                            <li>• Computer vision and NLP applications</li>
+                            <li>• ML platform build-out (feature stores, model registry)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="text-sm font-bold text-white mono">STACK FOCUS</h5>
+                        <p class="mt-2 text-sm text-[var(--c-text-mid)]">SageMaker · Vertex · Databricks ML · MLflow · Feast · LangChain · Azure OpenAI · Bedrock</p>
+                    </div>
+                </div>
+
+                <div class="mt-6 p-4 bg-[var(--c-surface)] border border-[var(--c-border)] rounded-lg">
+                    <div class="grid-3 gap-4">
+                        <div>
+                            <p class="mono text-xs text-[var(--c-primary)]">TEAM</p>
+                            <p class="text-xs text-[var(--c-text-mid)]">Applied Scientist + MLOps Engineer + Platform Engineer + Responsible AI advisor</p>
+                        </div>
+                        <div>
+                            <p class="mono text-xs text-[var(--c-primary)]">DELIVERABLES</p>
+                            <p class="text-xs text-[var(--c-text-mid)]">Feature store, automated tests, model cards, governance checklist</p>
+                        </div>
+                        <div>
+                            <p class="mono text-xs text-[var(--c-primary)]">TIMELINE</p>
+                            <p class="text-xs text-[var(--c-text-mid)]">Assessment → Prototype → Production (3-5 months typical)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analytics Enablement -->
+            <div class="card p-8">
+                <span class="badge badge--primary">Platform Engineering</span>
+                <h3 class="text-2xl font-bold text-white mt-4">Analytics Enablement</h3>
+                <p class="mt-3 text-[var(--c-text-mid)]">
+                    Build executive dashboards, self-service BI platforms, and semantic layers that empower business users while maintaining governance.
+                </p>
+                
+                <div class="grid-2 gap-6 mt-6">
+                    <div>
+                        <h5 class="text-sm font-bold text-white mono">USE CASES</h5>
+                        <ul class="mt-2 space-y-1 text-sm text-[var(--c-text-mid)]">
+                            <li>• Executive KPI dashboards and scorecards</li>
+                            <li>• Self-service BI with governance guardrails</li>
+                            <li>• Semantic layer and metrics catalog</li>
+                            <li>• Embedded analytics for SaaS products</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="text-sm font-bold text-white mono">STACK FOCUS</h5>
+                        <p class="mt-2 text-sm text-[var(--c-text-mid)]">Power BI · Tableau · Looker · dbt Semantic Layer · Cube.js · Superset</p>
+                    </div>
+                </div>
+
+                <div class="mt-6 p-4 bg-[var(--c-surface)] border border-[var(--c-border)] rounded-lg">
+                    <div class="grid-3 gap-4">
+                        <div>
+                            <p class="mono text-xs text-[var(--c-primary)]">TEAM</p>
+                            <p class="text-xs text-[var(--c-text-mid)]">Analytics Architect + 2 Analytics Engineers + UX Designer</p>
+                        </div>
+                        <div>
+                            <p class="mono text-xs text-[var(--c-primary)]">DELIVERABLES</p>
+                            <p class="text-xs text-[var(--c-text-mid)]">BI catalog, semantic models, KPI dictionary, training materials</p>
+                        </div>
+                        <div>
+                            <p class="mono text-xs text-[var(--c-primary)]">TIMELINE</p>
+                            <p class="text-xs text-[var(--c-text-mid)]">Requirements → Build → Enablement (2-4 months typical)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a href="#contact" class="btn">Discuss Your Platform Project</a>
+        </div>
+    </div>
+
+    <!-- Tier 3: Managed Operations -->
+    <div class="space-y-6">
+        <div class="text-center">
+            <span class="service-tier service-tier--supporting">TIER 3 · ONGOING</span>
+        </div>
+        <div class="card card--elevated p-10">
+            <div class="text-center max-w-3xl mx-auto mb-8">
+                <h3 class="text-3xl font-bold text-white">Managed Operations</h3>
+                <p class="mt-3 text-lg text-[var(--c-text-mid)]">24/7 DataOps with SLA-backed reliability, observability, and optimization for production platforms.</p>
+            </div>
+            
+            <div class="grid-2 gap-6">
+                <div>
+                    <h4 class="text-xl font-bold text-white">When You Need This</h4>
+                    <ul class="mt-3 space-y-2 text-sm text-[var(--c-text-mid)]">
+                        <li>• Production platform requires 24/7 monitoring</li>
+                        <li>• Internal team lacks DataOps depth or bandwidth</li>
+                        <li>• Need guaranteed uptime for mission-critical workloads</li>
+                        <li>• Want continuous optimization without hiring</li>
+                        <li>• Compliance requires documented operational controls</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-white">What You Get</h4>
+                    <ul class="mt-3 space-y-2 text-sm text-[var(--c-text-mid)]">
+                        <li>• 24/7 monitoring and incident response</li>
+                        <li>• Proactive optimization (cost, performance, security)</li>
+                        <li>• Monthly health reports and quarterly business reviews</li>
+                        <li>• Change management and release support</li>
+                        <li>• Runbooks and escalation procedures</li>
+                        <li>• SLA-backed uptime guarantees</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-8 p-6 bg-[var(--c-surface)] border border-[var(--c-border)] rounded-lg">
+                <div class="grid-3 gap-6">
+                    <div>
+                        <p class="mono text-xs text-[var(--c-primary)] mb-2">TEAM</p>
+                        <p class="text-sm text-[var(--c-text-mid)]">Site Reliability Lead + DataOps Engineers + FinOps Analyst + Security Liaison</p>
+                    </div>
+                    <div>
+                        <p class="mono text-xs text-[var(--c-primary)] mb-2">ENGAGEMENT MODEL</p>
+                        <p class="text-sm text-[var(--c-text-mid)]">Monthly subscription with SLA tiers (99.5%, 99.9%, 99.95%)</p>
+                    </div>
+                    <div>
+                        <p class="mono text-xs text-[var(--c-primary)] mb-2">ONBOARDING</p>
+                        <p class="text-sm text-[var(--c-text-mid)]">4-6 weeks for runbook creation, system instrumentation, team training</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 text-center">
+                <a href="#contact" class="btn">Explore Managed Services</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Decision Tree -->
+    <div class="space-y-8">
+        <div class="text-center max-w-3xl mx-auto">
+            <p class="section-label">DECISION GUIDE</p>
+            <h3 class="text-3xl font-bold text-white mt-4">Choosing the Right Engagement</h3>
+        </div>
+        
+        <div class="space-y-4">
+            <div class="decision-node">
+                <strong>Do you have a clear technical roadmap?</strong>
+                <p class="mt-2 text-sm text-[var(--c-text-mid)]">
+                    <strong>No →</strong> Start with <strong>Strategic Advisory</strong> to define strategy, build business cases, and create implementation roadmap.<br>
+                    <strong>Yes →</strong> Move to platform engineering or managed operations.
+                </p>
+            </div>
+            
+            <div class="decision-node">
+                <strong>Do you have internal engineering capacity?</strong>
+                <p class="mt-2 text-sm text-[var(--c-text-mid)]">
+                    <strong>Limited or none →</strong> Choose <strong>Platform Engineering</strong> with embedded teams or turnkey delivery.<br>
+                    <strong>Yes, but need expertise →</strong> Consider <strong>Advisory</strong> for architecture reviews and guidance.
+                </p>
+            </div>
+            
+            <div class="decision-node">
+                <strong>Do you need ongoing 24/7 operations?</strong>
+                <p class="mt-2 text-sm text-[var(--c-text-mid)]">
+                    <strong>Yes →</strong> <strong>Managed Operations</strong> provides SLA-backed reliability and continuous optimization.<br>
+                    <strong>No →</strong> Platform Engineering projects include transition/handoff with training.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Engagement Models -->
+    <div id="engage" class="space-y-8">
+        <div class="text-center max-w-3xl mx-auto">
+            <p class="section-label">ENGAGEMENT MODELS</p>
+            <h3 class="text-3xl font-bold text-white mt-4">How We Work Together</h3>
+        </div>
+        
+        <div class="card">
+            <div class="table-responsive">
+            <table class="detail-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Model</th>
+                        <th scope="col">Duration</th>
+                        <th scope="col">Team Structure</th>
+                        <th scope="col">Pricing</th>
+                        <th scope="col">Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Project-Based</strong></td>
+                        <td>3-6 months typical</td>
+                        <td>Dedicated pod with defined roles</td>
+                        <td>Fixed scope & fee</td>
+                        <td>Clear deliverables, bounded scope</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Embedded Teams</strong></td>
+                        <td>Ongoing (3-12+ months)</td>
+                        <td>Integrated with client backlog</td>
+                        <td>Monthly team rate</td>
+                        <td>Continuous roadmap execution</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Retainer Advisory</strong></td>
+                        <td>3-12 months</td>
+                        <td>Principal + SMEs as needed</td>
+                        <td>Monthly retainer hours</td>
+                        <td>Strategic guidance, architecture reviews</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Managed Services</strong></td>
+                        <td>12+ months</td>
+                        <td>SRE team with on-call rotation</td>
+                        <td>Monthly subscription</td>
+                        <td>24/7 operations, uptime guarantees</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="glass p-10 text-center">
+        <h3 class="text-3xl font-bold text-white">Not sure which service fits your needs?</h3>
+        <p class="mt-4 text-[var(--c-text-mid)] max-w-2xl mx-auto">
+            Schedule a 30-minute consultation. We'll discuss your challenges, timeline, and constraints—then recommend the right engagement model.
+        </p>
+        <a href="#contact" class="btn mt-8">Schedule Consultation</a>
+    </div>
+</section>
+
+    </div>
+
+    <!-- Capabilities -->
+    <div class="space-y-8">
+        <div class="text-center max-w-3xl mx-auto">
+            <p class="section-label">CAPABILITIES</p>
+            <h2 class="section-title mt-4">Capability Deep Dive</h2>
+            <p class="section-lede mx-auto mt-4">A concise view of what we deliver across platforms, governance, and operations—backed by inspectable artifacts and production-grade practices.</p>
+        </div>
+
         <div class="grid-3">
-            <div class="card card--interactive">
-                <span class="service-tier service-tier--premium">Premium</span>
-                <h3 class="text-2xl font-bold text-white">Strategic Advisory</h3>
-                <p class="text-sm text-[var(--c-text-mid)] mt-3">Fractional CDO, architecture council, investment diligence. For CTOs and boards navigating modernization.</p>
-                <a href="#services" class="link-underline mt-6 inline-flex">Explore Advisory Services →</a>
+            <div class="card">
+                <span class="badge badge--secondary">Platforms</span>
+                <h3 class="text-2xl font-bold text-[var(--c-text-high)] mt-4">Cloud, Lakehouse, and Enterprise</h3>
+                <p class="mt-3 text-sm text-[var(--c-text-mid)]">Delivery on the leading ecosystems with architecture that remains secure, portable, and cost-aware.</p>
+                <ul class="mt-5 space-y-2 text-sm text-[var(--c-text-mid)]">
+                    <li>• AWS · Azure · Databricks · Microsoft Fabric</li>
+                    <li>• Snowflake and governed analytics foundations</li>
+                    <li>• Cloudera modernization and migration planning</li>
+                </ul>
             </div>
-            <div class="card card--interactive">
-                <span class="service-tier service-tier--core">Core</span>
-                <h3 class="text-2xl font-bold text-white">Platform Engineering</h3>
-                <p class="text-sm text-[var(--c-text-mid)] mt-3">Data platforms, AI/MLOps, analytics enablement. Embedded teams or turnkey project delivery.</p>
-                <a href="#services" class="link-underline mt-6 inline-flex">Explore Platform Services →</a>
+            <div class="card">
+                <span class="badge badge--secondary">Delivery</span>
+                <h3 class="text-2xl font-bold text-[var(--c-text-high)] mt-4">Engineering You Can Inspect</h3>
+                <p class="mt-3 text-sm text-[var(--c-text-mid)]">Structured delivery with clear decision records, automation, and documentation that survives handoffs.</p>
+                <ul class="mt-5 space-y-2 text-sm text-[var(--c-text-mid)]">
+                    <li>• Architecture packs and ADR decision logs</li>
+                    <li>• IaC + CI/CD with promotion and rollback strategy</li>
+                    <li>• dbt models, tests, and repeatable environments</li>
+                </ul>
             </div>
-            <div class="card card--interactive">
-                <span class="service-tier service-tier--supporting">Ongoing</span>
-                <h3 class="text-2xl font-bold text-white">Managed Operations</h3>
-                <p class="text-sm text-[var(--c-text-mid)] mt-3">24/7 DataOps with SLA-backed reliability, observability, cost optimization.</p>
-                <a href="#services" class="link-underline mt-6 inline-flex">Explore Managed Services →</a>
+            <div class="card">
+                <span class="badge badge--secondary">Operations</span>
+                <h3 class="text-2xl font-bold text-[var(--c-text-high)] mt-4">Reliability, Observability, and Governance</h3>
+                <p class="mt-3 text-sm text-[var(--c-text-mid)]">Production-first controls so the platform stays stable, auditable, and efficient as volume and teams grow.</p>
+                <ul class="mt-5 space-y-2 text-sm text-[var(--c-text-mid)]">
+                    <li>• SLIs/SLOs, alerting, and incident playbooks</li>
+                    <li>• Data quality, lineage, and access controls</li>
+                    <li>• Audit evidence packs and FinOps visibility</li>
+                </ul>
             </div>
+        </div>
+
+        <div class="glass p-10 text-center">
+            <h3 class="text-3xl font-bold text-white">Explore the full capability set</h3>
+            <p class="mt-4 text-[var(--c-text-mid)] max-w-2xl mx-auto">Review the complete platform matrix, governance gates, and sample deliverables to evaluate clarity, rigor, and maintainability.</p>
+            <a href="#capabilities" class="btn mt-8">View Capability Deep Dive</a>
         </div>
     </div>
 
     <!-- Technology Stack -->
     <div class="logo-band">
         <p class="mono text-xs tracking-[0.5em] text-[var(--c-text-low)]">CERTIFIED EXPERTISE</p>
-        <div class="logo-grid">
-            <span>AWS</span>
-            <span>Azure</span>
-            <span>GCP</span>
-            <span>Databricks</span>
-            <span>Snowflake</span>
-            <span>Kafka</span>
-            <span>dbt</span>
-            <span>Terraform</span>
+        <div class="logo-marquee" aria-label="Certified expertise">
+            <div class="logo-track" aria-hidden="true">
+                <div class="logo-set">
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">AWS</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">Azure</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">GCP</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/databricks/databricks-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">Databricks</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/snowflake/snowflake-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">Snowflake</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/google_bigquery/google_bigquery-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">BigQuery</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/cloudera/cloudera-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">Cloudera</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/microsoft/microsoft-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">Fabric</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">Kafka</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/apache_airflow/apache_airflow-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">Airflow</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/apache_spark/apache_spark-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">Spark</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/apache_flink/apache_flink-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">Flink</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">Kubernetes</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/getdbt/getdbt-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">dbt</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/terraformio/terraformio-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">Terraform</span></div>
+                </div>
+                <div class="logo-set" aria-hidden="true">
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">AWS</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">Azure</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">GCP</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/databricks/databricks-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">Databricks</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/snowflake/snowflake-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">Snowflake</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/google_bigquery/google_bigquery-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">BigQuery</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/cloudera/cloudera-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">Cloudera</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/microsoft/microsoft-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">Fabric</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">Kafka</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/apache_airflow/apache_airflow-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">Airflow</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/apache_spark/apache_spark-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">Spark</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/apache_flink/apache_flink-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">Flink</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">Kubernetes</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/getdbt/getdbt-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">dbt</span></div>
+                    <div class="logo-item"><img class="logo-img" src="https://www.vectorlogo.zone/logos/terraformio/terraformio-icon.svg" alt="" loading="lazy" decoding="async"><span class="logo-name">Terraform</span></div>
+                </div>
+            </div>
         </div>
     </div>
 

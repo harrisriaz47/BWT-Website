@@ -1,57 +1,420 @@
 <section id="capabilities" class="py-24 space-y-16">
     <div class="max-w-3xl mx-auto text-center">
         <p class="section-label">CAPABILITY DEEP DIVE</p>
-        <h2 class="text-4xl md:text-5xl font-bold text-white">Tooling, Deliverables, and Governance You Can Inspect</h2>
-        <p class="mt-4 text-lg text-[var(--c-text-mid)]">Explore how Bytewise structures teams, selects platforms, and documents every milestone.</p>
+        <h2 class="text-4xl md:text-5xl font-bold text-[var(--c-text-high)]">Tooling, Deliverables, and Governance You Can Inspect</h2>
+        <p class="mt-4 text-lg text-[var(--c-text-mid)]">Explore how Bytewise ships: structured delivery, explicit governance, and artifacts you can review—from architecture decisions and IaC to operational runbooks and audit-ready evidence.</p>
     </div>
 
     <div class="capability-grid">
         <article class="card">
-            <h3>Data Platforms</h3>
-            <p class="text-sm text-[var(--c-text-mid)]">Accelerators covering ingestion, modeling, governance, and FinOps.</p>
+            <h3 class="text-xl font-bold text-[var(--c-text-high)]">Data Platforms</h3>
+            <p class="text-sm text-[var(--c-text-mid)]">Production-grade patterns for ingestion, modeling, orchestration, governance, and FinOps—built to be observable, scalable, and maintainable.</p>
             <ul>
-                <li>Blueprints for Snowflake, Databricks, BigQuery</li>
-                <li>Terraform modules + dbt packages</li>
-                <li>Lineage + data quality guardrails</li>
+                <li>Reference architectures for Snowflake, Databricks, BigQuery (lakehouse + warehouse)</li>
+                <li>Terraform modules + dbt packages with repeatable environments</li>
+                <li>Lineage, SLAs, and data quality guardrails (contracts, tests, and alerting)</li>
             </ul>
-            <p class="mono text-xs text-[var(--c-text-low)]">Deliverables: Architecture pack, catalog, runbook</p>
+            <p class="mono text-xs text-[var(--c-text-low)]">Deliverables: Architecture pack, data catalog setup, operational runbook</p>
         </article>
         <article class="card">
-            <h3>Applied AI & MLOps</h3>
-            <p class="text-sm text-[var(--c-text-mid)]">From feature stores to model observability and responsible AI policies.</p>
+            <h3 class="text-xl font-bold text-[var(--c-text-high)]">Applied AI & MLOps</h3>
+            <p class="text-sm text-[var(--c-text-mid)]">From experimentation to production: pipelines, model registry practices, observability, and responsible AI controls you can operate long-term.</p>
             <ul>
-                <li>Feature engineering kit + monitoring templates</li>
-                <li>ML pipeline scaffolds (SageMaker, Vertex, Databricks)</li>
-                <li>LLM integration guardrails + red teaming</li>
+                <li>Feature engineering kit + drift/quality monitoring templates</li>
+                <li>ML pipeline scaffolds (SageMaker, Vertex, Databricks) with CI/CD</li>
+                <li>LLM integration guardrails (evaluation, safety checks) + red teaming</li>
             </ul>
-            <p class="mono text-xs text-[var(--c-text-low)]">Deliverables: Model cards, incident playbooks</p>
+            <p class="mono text-xs text-[var(--c-text-low)]">Deliverables: Model cards, evaluation reports, incident playbooks</p>
         </article>
         <article class="card">
-            <h3>Analytics & Activation</h3>
-            <p class="text-sm text-[var(--c-text-mid)]">Human-centered insights with governance for self-service.</p>
+            <h3 class="text-xl font-bold text-[var(--c-text-high)]">Analytics & Activation</h3>
+            <p class="text-sm text-[var(--c-text-mid)]">Decision-quality analytics with a governed semantic layer—so metrics are consistent, trusted, and adopted across teams.</p>
             <ul>
-                <li>Executive & operational dashboard templates</li>
-                <li>Semantic models + KPI dictionaries</li>
-                <li>Enablement curriculum + office hours</li>
+                <li>Executive and operational dashboards aligned to KPIs</li>
+                <li>Semantic models + KPI dictionaries with ownership and definitions</li>
+                <li>Enablement curriculum, office hours, and adoption tracking</li>
             </ul>
-            <p class="mono text-xs text-[var(--c-text-low)]">Deliverables: BI catalog, training assets</p>
+            <p class="mono text-xs text-[var(--c-text-low)]">Deliverables: BI catalog, semantic layer docs, training assets</p>
         </article>
         <article class="card">
-            <h3>Security & Compliance</h3>
-            <p class="text-sm text-[var(--c-text-mid)]">Embedded governance from kickoff through transition.</p>
+            <h3 class="text-xl font-bold text-[var(--c-text-high)]">Security & Compliance</h3>
+            <p class="text-sm text-[var(--c-text-mid)]">Security-first delivery with evidence you can hand to auditors: controls, policies, and implementation details embedded from day one.</p>
             <ul>
-                <li>SOC2, HIPAA, PCI aware delivery model</li>
-                <li>DPIA support + data handling policies</li>
-                <li>Continuous threat modeling + audit packs</li>
+                <li>SOC2, HIPAA, PCI-aligned delivery patterns and access controls</li>
+                <li>DPIA support + data handling policies + retention/TTL guidance</li>
+                <li>Threat modeling, logging standards, and audit evidence packs</li>
             </ul>
-            <p class="mono text-xs text-[var(--c-text-low)]">Deliverables: Control matrix, auditor packet</p>
+            <p class="mono text-xs text-[var(--c-text-low)]">Deliverables: Control matrix, auditor packet, security runbook</p>
         </article>
+    </div>
+
+    <div class="max-w-5xl mx-auto">
+        <div class="text-center">
+            <p class="section-label">WHAT YOU GET</p>
+            <h3 class="text-3xl md:text-4xl font-bold text-[var(--c-text-high)]">Artifacts That Make Progress Visible</h3>
+            <p class="mt-3 text-[var(--c-text-mid)]">Your team should never have to guess what was built, why decisions were made, or how to operate the system. We deliver inspectable artifacts that survive handoffs and audits.</p>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+            <article class="card">
+                <div class="flex items-center justify-between gap-4">
+                    <h4 class="text-lg font-bold text-[var(--c-text-high)]">Architecture & Decisions</h4>
+                    <span class="badge badge--outline">ADR</span>
+                </div>
+                <p class="mt-3 text-sm text-[var(--c-text-mid)]">Clear design rationale and constraints, documented in a way your reviewers and operators can trust.</p>
+                <ul class="mt-4 space-y-2 text-sm text-[var(--c-text-mid)]">
+                    <li>Architecture diagrams + component boundaries</li>
+                    <li>Tradeoff decisions (ADRs) and risk register</li>
+                    <li>Data domain model + ownership map</li>
+                </ul>
+                <p class="mt-5 mono text-xs text-[var(--c-text-low)]">Output: Architecture pack + decision log</p>
+            </article>
+
+            <article class="card">
+                <div class="flex items-center justify-between gap-4">
+                    <h4 class="text-lg font-bold text-[var(--c-text-high)]">Code & Automation</h4>
+                    <span class="badge badge--outline">CI/CD</span>
+                </div>
+                <p class="mt-3 text-sm text-[var(--c-text-mid)]">Repeatable builds and environments that reduce heroics and keep changes safe as the platform evolves.</p>
+                <ul class="mt-4 space-y-2 text-sm text-[var(--c-text-mid)]">
+                    <li>Terraform modules + environment promotion</li>
+                    <li>dbt packages + tests + release notes</li>
+                    <li>Pipeline templates with rollback strategy</li>
+                </ul>
+                <p class="mt-5 mono text-xs text-[var(--c-text-low)]">Output: Repo structure + automation runbook</p>
+            </article>
+
+            <article class="card">
+                <div class="flex items-center justify-between gap-4">
+                    <h4 class="text-lg font-bold text-[var(--c-text-high)]">Operations & Evidence</h4>
+                    <span class="badge badge--outline">RUNBOOKS</span>
+                </div>
+                <p class="mt-3 text-sm text-[var(--c-text-mid)]">Operational readiness isn’t a phase at the end—it’s built in. Evidence stays current, not a once-a-year scramble.</p>
+                <ul class="mt-4 space-y-2 text-sm text-[var(--c-text-mid)]">
+                    <li>SLIs/SLOs + alerting + on-call expectations</li>
+                    <li>Incident playbooks (data + ML + infra)</li>
+                    <li>Audit evidence packet and control mapping</li>
+                </ul>
+                <p class="mt-5 mono text-xs text-[var(--c-text-low)]">Output: Runbooks + dashboards + evidence pack</p>
+            </article>
+        </div>
+    </div>
+
+    <div class="max-w-5xl mx-auto">
+        <div class="text-center">
+            <p class="section-label">DELIVERY SYSTEM</p>
+            <h3 class="text-3xl md:text-4xl font-bold text-[var(--c-text-high)]">A Repeatable Playbook, Not A One-Off Project</h3>
+            <p class="mt-3 text-[var(--c-text-mid)]">We combine senior technical leadership with a structured delivery cadence. You get steady progress, clear checkpoints, and measurable outcomes—without sacrificing speed.</p>
+        </div>
+
+        <div class="mt-10 grid gap-6 lg:grid-cols-2">
+            <article class="card">
+                <div class="flex items-start gap-4">
+                    <span class="badge badge--primary">01</span>
+                    <div>
+                        <h4 class="text-lg font-bold text-[var(--c-text-high)]">Discovery & Alignment</h4>
+                        <p class="mt-2 text-sm text-[var(--c-text-mid)]">Define the target outcomes, operational constraints, and the scope boundary so the build stays focused.</p>
+                        <ul class="mt-4 space-y-2 text-sm text-[var(--c-text-mid)]">
+                            <li>Stakeholder interviews + KPI alignment</li>
+                            <li>Current-state system map + pain points</li>
+                            <li>Delivery plan with milestones and owners</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="flex items-start gap-4">
+                    <span class="badge badge--primary">02</span>
+                    <div>
+                        <h4 class="text-lg font-bold text-[var(--c-text-high)]">Design & Governance Setup</h4>
+                        <p class="mt-2 text-sm text-[var(--c-text-mid)]">Lock in the architecture, interfaces, and controls before scaling build effort across teams.</p>
+                        <ul class="mt-4 space-y-2 text-sm text-[var(--c-text-mid)]">
+                            <li>Architecture pack + decision records (ADRs)</li>
+                            <li>Data contracts, access controls, and naming standards</li>
+                            <li>Quality gates + release strategy</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="flex items-start gap-4">
+                    <span class="badge badge--primary">03</span>
+                    <div>
+                        <h4 class="text-lg font-bold text-[var(--c-text-high)]">Build & Automate</h4>
+                        <p class="mt-2 text-sm text-[var(--c-text-mid)]">Ship working increments with CI/CD, tests, and observability baked in—not bolted on after issues surface.</p>
+                        <ul class="mt-4 space-y-2 text-sm text-[var(--c-text-mid)]">
+                            <li>Ingestion + modeling + orchestration</li>
+                            <li>IaC environments and change management</li>
+                            <li>Dashboards, alerts, and incident playbooks</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="flex items-start gap-4">
+                    <span class="badge badge--primary">04</span>
+                    <div>
+                        <h4 class="text-lg font-bold text-[var(--c-text-high)]">Operate & Transfer</h4>
+                        <p class="mt-2 text-sm text-[var(--c-text-mid)]">Make the system sustainable. We harden, document, and enable your team to run it with confidence.</p>
+                        <ul class="mt-4 space-y-2 text-sm text-[var(--c-text-mid)]">
+                            <li>Runbooks + on-call enablement + handover</li>
+                            <li>SLO reviews and weekly operational cadence</li>
+                            <li>Backlog for next increments and scaling</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <div class="max-w-5xl mx-auto">
+        <div class="text-center">
+            <p class="section-label">TOOLING</p>
+            <h3 class="text-3xl md:text-4xl font-bold text-[var(--c-text-high)]">Compatible With Your Stack</h3>
+            <p class="mt-3 text-[var(--c-text-mid)]">We don’t force a single vendor path. We work with your constraints and build portable patterns that keep you in control.</p>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-2">
+            <article class="card">
+                <h4 class="text-lg font-bold text-[var(--c-text-high)]">Data Platform Surface Area</h4>
+                <p class="mt-2 text-sm text-[var(--c-text-mid)]">Ingestion, transformation, orchestration, governance, and BI—implemented with strong defaults and explicit ownership.</p>
+                <div class="mt-5 flex flex-wrap gap-2">
+                    <span class="badge badge-ghost">dbt</span>
+                    <span class="badge badge-ghost">Airflow</span>
+                    <span class="badge badge-ghost">Dagster</span>
+                    <span class="badge badge-ghost">Fivetran</span>
+                    <span class="badge badge-ghost">Kafka</span>
+                    <span class="badge badge-ghost">Snowflake</span>
+                    <span class="badge badge-ghost">Databricks</span>
+                    <span class="badge badge-ghost">BigQuery</span>
+                    <span class="badge badge-ghost">Looker</span>
+                    <span class="badge badge-ghost">Power BI</span>
+                </div>
+                <p class="mt-5 mono text-xs text-[var(--c-text-low)]">Focus: repeatability, data quality, lineage, and cost visibility</p>
+            </article>
+
+            <article class="card">
+                <h4 class="text-lg font-bold text-[var(--c-text-high)]">MLOps & Observability</h4>
+                <p class="mt-2 text-sm text-[var(--c-text-mid)]">Production controls for training, deployment, evaluation, and monitoring—plus operational hooks for incident response.</p>
+                <div class="mt-5 flex flex-wrap gap-2">
+                    <span class="badge badge-ghost">SageMaker</span>
+                    <span class="badge badge-ghost">Vertex AI</span>
+                    <span class="badge badge-ghost">MLflow</span>
+                    <span class="badge badge-ghost">Databricks ML</span>
+                    <span class="badge badge-ghost">Great Expectations</span>
+                    <span class="badge badge-ghost">Monte Carlo</span>
+                    <span class="badge badge-ghost">OpenTelemetry</span>
+                    <span class="badge badge-ghost">Grafana</span>
+                    <span class="badge badge-ghost">Prometheus</span>
+                </div>
+                <p class="mt-5 mono text-xs text-[var(--c-text-low)]">Focus: evals, drift, reliability, and safe change management</p>
+            </article>
+        </div>
+    </div>
+
+    <div class="max-w-5xl mx-auto">
+        <div class="text-center">
+            <p class="section-label">PLATFORMS</p>
+            <h3 class="text-3xl md:text-4xl font-bold text-[var(--c-text-high)]">Platforms We Deliver On</h3>
+            <p class="mt-3 text-[var(--c-text-mid)]">We build production systems across the leading cloud, lakehouse, and enterprise data ecosystems. The emphasis is consistent: clear architecture, well-governed data, reliable operations, and inspectable deliverables.</p>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <article class="card">
+                <div class="flex items-center justify-between gap-4">
+                    <h4 class="text-lg font-bold text-[var(--c-text-high)]">AWS</h4>
+                    <span class="badge badge--outline">CLOUD</span>
+                </div>
+                <p class="mt-2 text-sm text-[var(--c-text-mid)]">Secure, scalable foundations for analytics, ML, and streaming—aligned to enterprise guardrails.</p>
+                <ul class="mt-4 space-y-2 text-sm text-[var(--c-text-mid)]">
+                    <li>Landing zones, network boundaries, IAM patterns</li>
+                    <li>Lakehouse architectures, batch + streaming pipelines</li>
+                    <li>Operational telemetry and cost controls</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <div class="flex items-center justify-between gap-4">
+                    <h4 class="text-lg font-bold text-[var(--c-text-high)]">Azure</h4>
+                    <span class="badge badge--outline">CLOUD</span>
+                </div>
+                <p class="mt-2 text-sm text-[var(--c-text-mid)]">Enterprise-ready data platforms with identity integration, governance, and operational readiness.</p>
+                <ul class="mt-4 space-y-2 text-sm text-[var(--c-text-mid)]">
+                    <li>Secure-by-default resource design and RBAC</li>
+                    <li>Data integration, orchestration, and observability</li>
+                    <li>Controls and evidence suitable for regulated workloads</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <div class="flex items-center justify-between gap-4">
+                    <h4 class="text-lg font-bold text-[var(--c-text-high)]">Databricks</h4>
+                    <span class="badge badge--outline">LAKEHOUSE</span>
+                </div>
+                <p class="mt-2 text-sm text-[var(--c-text-mid)]">End-to-end lakehouse delivery—from ingestion to production ML—with robust governance and operations.</p>
+                <ul class="mt-4 space-y-2 text-sm text-[var(--c-text-mid)]">
+                    <li>Medallion design, Delta patterns, performance tuning</li>
+                    <li>Jobs/workflows, CI/CD, and environment promotion</li>
+                    <li>ML lifecycle practices: evals, monitoring, incident playbooks</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <div class="flex items-center justify-between gap-4">
+                    <h4 class="text-lg font-bold text-[var(--c-text-high)]">Microsoft Fabric</h4>
+                    <span class="badge badge--outline">LAKEHOUSE</span>
+                </div>
+                <p class="mt-2 text-sm text-[var(--c-text-mid)]">A unified analytics stack delivered with clear semantic governance and operational guardrails.</p>
+                <ul class="mt-4 space-y-2 text-sm text-[var(--c-text-mid)]">
+                    <li>Lakehouse/warehouse setup and orchestration patterns</li>
+                    <li>Semantic model design and KPI governance</li>
+                    <li>Operational monitoring and controlled release workflows</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <div class="flex items-center justify-between gap-4">
+                    <h4 class="text-lg font-bold text-[var(--c-text-high)]">Cloudera</h4>
+                    <span class="badge badge--outline">ENTERPRISE</span>
+                </div>
+                <p class="mt-2 text-sm text-[var(--c-text-mid)]">Modernization and hardening for enterprise data estates—governance-forward and operations-ready.</p>
+                <ul class="mt-4 space-y-2 text-sm text-[var(--c-text-mid)]">
+                    <li>Stability and performance improvements for critical pipelines</li>
+                    <li>Security controls, lineage, and operational visibility</li>
+                    <li>Migration planning toward cloud/hybrid targets</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <div class="flex items-center justify-between gap-4">
+                    <h4 class="text-lg font-bold text-[var(--c-text-high)]">Snowflake</h4>
+                    <span class="badge badge--outline">WAREHOUSE</span>
+                </div>
+                <p class="mt-2 text-sm text-[var(--c-text-mid)]">Governed analytics foundations with performance, cost controls, and trusted metrics at scale.</p>
+                <ul class="mt-4 space-y-2 text-sm text-[var(--c-text-mid)]">
+                    <li>Warehouse modeling, data quality, and performance tuning</li>
+                    <li>Role design, secure data sharing, and governance patterns</li>
+                    <li>CI/CD for transformations and repeatable environments</li>
+                </ul>
+            </article>
+        </div>
+
+        <div class="mt-8 glass p-6 md:p-8 rounded-[var(--radii)]">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+                <div>
+                    <h4 class="text-2xl font-bold text-[var(--c-text-high)]">Modern Data Stack (MDS)</h4>
+                    <p class="mt-2 text-sm text-[var(--c-text-mid)]">When you prefer best-in-class components, we assemble an MDS that remains governed and maintainable. The integration is intentional: strong contracts, clear ownership, and observable operations.</p>
+                    <div class="mt-5 flex flex-wrap gap-2">
+                        <span class="badge badge-ghost">Ingestion</span>
+                        <span class="badge badge-ghost">Transformation</span>
+                        <span class="badge badge-ghost">Orchestration</span>
+                        <span class="badge badge-ghost">Quality</span>
+                        <span class="badge badge-ghost">Catalog/Lineage</span>
+                        <span class="badge badge-ghost">BI</span>
+                        <span class="badge badge-ghost">Observability</span>
+                        <span class="badge badge-ghost">FinOps</span>
+                    </div>
+                </div>
+                <div class="min-w-[260px]">
+                    <p class="mono text-xs text-[var(--c-text-low)]">Typical outcomes</p>
+                    <ul class="mt-3 space-y-2 text-sm text-[var(--c-text-mid)]">
+                        <li>Faster delivery with repeatable environments</li>
+                        <li>Fewer incidents via quality gates and observability</li>
+                        <li>Consistent metrics through semantic governance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="glass max-w-5xl mx-auto p-8 md:p-10 rounded-[var(--radii)]">
+        <div class="text-center">
+            <p class="section-label">GOVERNANCE</p>
+            <h3 class="text-3xl md:text-4xl font-bold text-[var(--c-text-high)]">Quality Gates That Prevent Regressions</h3>
+            <p class="mt-3 text-[var(--c-text-mid)]">The goal is fewer surprises in production. We define explicit gates so changes stay safe as volume, complexity, and teams grow.</p>
+        </div>
+
+        <div class="mt-10 grid gap-4">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 border border-[var(--c-border)] rounded-[var(--radii)] p-5">
+                <div>
+                    <p class="font-semibold text-[var(--c-text-high)]">Data Contracts & Schema Discipline</p>
+                    <p class="text-sm text-[var(--c-text-mid)]">Define interfaces between producers and consumers to reduce breaking changes.</p>
+                </div>
+                <span class="mono text-xs text-[var(--c-text-low)]">Contracts · versioning · compatibility</span>
+            </div>
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 border border-[var(--c-border)] rounded-[var(--radii)] p-5">
+                <div>
+                    <p class="font-semibold text-[var(--c-text-high)]">Testing & Data Quality</p>
+                    <p class="text-sm text-[var(--c-text-mid)]">Prevent silent failures with unit tests, freshness checks, and anomaly alerts.</p>
+                </div>
+                <span class="mono text-xs text-[var(--c-text-low)]">Tests · SLAs · alerts</span>
+            </div>
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 border border-[var(--c-border)] rounded-[var(--radii)] p-5">
+                <div>
+                    <p class="font-semibold text-[var(--c-text-high)]">Observability & Incident Response</p>
+                    <p class="text-sm text-[var(--c-text-mid)]">Instrumentation, dashboards, and playbooks tuned to your operational reality.</p>
+                </div>
+                <span class="mono text-xs text-[var(--c-text-low)]">SLIs/SLOs · runbooks · on-call</span>
+            </div>
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 border border-[var(--c-border)] rounded-[var(--radii)] p-5">
+                <div>
+                    <p class="font-semibold text-[var(--c-text-high)]">Access Controls & Audit Evidence</p>
+                    <p class="text-sm text-[var(--c-text-mid)]">Least privilege by default, with evidence mapped to required controls.</p>
+                </div>
+                <span class="mono text-xs text-[var(--c-text-low)]">RBAC · logging · evidence packs</span>
+            </div>
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 border border-[var(--c-border)] rounded-[var(--radii)] p-5">
+                <div>
+                    <p class="font-semibold text-[var(--c-text-high)]">FinOps & Cost Controls</p>
+                    <p class="text-sm text-[var(--c-text-mid)]">Cost is a product feature: budgets, usage visibility, and efficiency guardrails.</p>
+                </div>
+                <span class="mono text-xs text-[var(--c-text-low)]">Budgets · chargeback · optimization</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-5xl mx-auto">
+        <div class="text-center">
+            <p class="section-label">FAQ</p>
+            <h3 class="text-3xl md:text-4xl font-bold text-[var(--c-text-high)]">Common Questions</h3>
+            <p class="mt-3 text-[var(--c-text-mid)]">A few details teams usually want to confirm before committing to a build.</p>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-2">
+            <article class="card">
+                <h4 class="text-lg font-bold text-[var(--c-text-high)]">Do you work with in-house teams?</h4>
+                <p class="mt-2 text-sm text-[var(--c-text-mid)]">Yes. We can embed alongside your engineers, pair on architecture, and co-own delivery while enabling your team to operate independently.</p>
+            </article>
+            <article class="card">
+                <h4 class="text-lg font-bold text-[var(--c-text-high)]">How do you manage risk in production?</h4>
+                <p class="mt-2 text-sm text-[var(--c-text-mid)]">We use explicit change control, CI/CD gates, rollout strategies, and operational readiness checks backed by dashboards and incident playbooks.</p>
+            </article>
+            <article class="card">
+                <h4 class="text-lg font-bold text-[var(--c-text-high)]">Can you support regulated environments?</h4>
+                <p class="mt-2 text-sm text-[var(--c-text-mid)]">Yes. Our delivery patterns include access controls, audit evidence generation, and documentation that maps to common compliance needs.</p>
+            </article>
+            <article class="card">
+                <h4 class="text-lg font-bold text-[var(--c-text-high)]">What does “inspectable deliverables” mean?</h4>
+                <p class="mt-2 text-sm text-[var(--c-text-mid)]">You receive structured documentation, decision logs, runbooks, and operational dashboards—so you can review quality and maintainability before scaling investment.</p>
+            </article>
+            <article class="card">
+                <h4 class="text-lg font-bold text-[var(--c-text-high)]">How do you measure success?</h4>
+                <p class="mt-2 text-sm text-[var(--c-text-mid)]">We align to business KPIs and operational metrics (freshness, reliability, latency, cost) with an explicit cadence for reviewing progress and outcomes.</p>
+            </article>
+            <article class="card">
+                <h4 class="text-lg font-bold text-[var(--c-text-high)]">Do you help after go-live?</h4>
+                <p class="mt-2 text-sm text-[var(--c-text-mid)]">Yes. We can provide ongoing DataOps/MLOps support, SLO reviews, and iterative improvements based on production learning.</p>
+            </article>
+        </div>
     </div>
 
     <div class="glass capability-detail">
         <div>
-            <h3 class="text-3xl font-bold text-white">See A Sample Deliverable Set</h3>
-            <p class="mt-3 text-[var(--c-text-mid)]">We can walk you through anonymized playbooks, Jira/Wiki structures, and instrumentation dashboards during a 20-min call.</p>
+            <h3 class="text-3xl font-bold text-[var(--c-text-high)]">See A Sample Deliverable Set</h3>
+            <p class="mt-3 text-[var(--c-text-mid)]">We can walk you through anonymized playbooks, documentation structures, and instrumentation dashboards so you can evaluate clarity, rigor, and maintainability before you commit.</p>
         </div>
         <a href="#contact" class="btn">Request The Deep Dive</a>
     </div>
