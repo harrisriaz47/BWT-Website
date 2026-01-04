@@ -105,6 +105,50 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Dynamic content enhancers (forms, anchor helpers) ---
+    let carouselCleanupFns = [];
+
+    function hashString(input) {
+        let hash = 0;
+        for (let i = 0; i < input.length; i += 1) {
+            hash = ((hash << 5) - hash) + input.charCodeAt(i);
+            hash |= 0;
+        }
+        return Math.abs(hash);
+    }
+
+    function assignCardBackgrounds() {
+        const cards = Array.from(document.querySelectorAll('.card'));
+        if (!cards.length) return;
+
+        const rootStyles = window.getComputedStyle(document.documentElement);
+        const poolSize = Number.parseInt(rootStyles.getPropertyValue('--card-bg-pool-size') || '30', 10) || 30;
+
+        const positions = [
+            'center',
+            'center 35%',
+            'center 65%',
+            'left center',
+            'right center',
+            'top center',
+            'bottom center'
+        ];
+
+        cards.forEach((card, index) => {
+            // Respect per-card overrides (inline styles set via HTML).
+            if (card.style.getPropertyValue('--card-bg')) return;
+
+            const seedText = `${card.textContent || ''}`.replace(/\s+/g, ' ').trim();
+            const baseSeed = seedText ? hashString(seedText) : (index + 1);
+            const seed = baseSeed + (index + 1) * 97;
+            const chosen = (seed % poolSize) + 1;
+
+            const pos = positions[seed % positions.length];
+
+            card.style.setProperty('--card-bg', `var(--card-bg-${chosen})`);
+            card.style.setProperty('--card-bg-pos', pos);
+        });
+    }
+
     function enhanceDynamicContent() {
         wireMockForm('asset-download-form', 'assetSubmit', 'assetStatus', 'Checklist is on its way.');
         wireMockForm('insight-form', 'insightSubmit', 'insightStatus', 'Report sent to your inbox.');
@@ -112,6 +156,80 @@ document.addEventListener('DOMContentLoaded', () => {
         wireMockForm('engage-form', 'engageSubmit', 'engageStatus', 'We will reach out within 1 business day.');
         wireMockForm('qualified-contact-form', 'qualifiedContactSubmit', 'qualifiedContactStatus', 'We received your inquiry. A specialist will respond shortly.');
         focusAssetButtons();
+        assignCardBackgrounds();
+        initCarousels();
+    }
+
+    function initCarousels() {
+        // Clean up any previous page's carousels (because content is replaced via fetch)
+        if (carouselCleanupFns.length) {
+            carouselCleanupFns.forEach(fn => {
+                try { fn(); } catch (_) { /* noop */ }
+            });
+            carouselCleanupFns = [];
+        }
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')?.matches;
+        const carousels = Array.from(document.querySelectorAll('[data-carousel]'));
+        if (!carousels.length) return;
+
+        carousels.forEach(carouselEl => {
+            const slides = Array.from(carouselEl.querySelectorAll('.carousel-slide'));
+            if (slides.length <= 1) return;
+
+            let activeIndex = Math.max(0, slides.findIndex(s => s.classList.contains('is-active')));
+            if (activeIndex === -1) activeIndex = 0;
+
+            const setActive = (nextIndex) => {
+                slides[activeIndex]?.classList.remove('is-active');
+                activeIndex = (nextIndex + slides.length) % slides.length;
+                slides[activeIndex]?.classList.add('is-active');
+            };
+
+            const prevBtn = carouselEl.querySelector('[data-carousel-prev]');
+            const nextBtn = carouselEl.querySelector('[data-carousel-next]');
+
+            const onPrev = () => setActive(activeIndex - 1);
+            const onNext = () => setActive(activeIndex + 1);
+
+            prevBtn?.addEventListener('click', onPrev);
+            nextBtn?.addEventListener('click', onNext);
+
+            let timerId = null;
+            const autoplayEnabled = carouselEl.getAttribute('data-autoplay') !== 'false';
+            const interval = Number(carouselEl.getAttribute('data-interval') || 6000);
+
+            const start = () => {
+                if (prefersReducedMotion) return;
+                if (!autoplayEnabled) return;
+                if (timerId) return;
+                timerId = window.setInterval(() => setActive(activeIndex + 1), Math.max(2500, interval));
+            };
+
+            const stop = () => {
+                if (!timerId) return;
+                window.clearInterval(timerId);
+                timerId = null;
+            };
+
+            // Pause autoplay on hover/focus for control
+            carouselEl.addEventListener('mouseenter', stop);
+            carouselEl.addEventListener('mouseleave', start);
+            carouselEl.addEventListener('focusin', stop);
+            carouselEl.addEventListener('focusout', start);
+
+            start();
+
+            carouselCleanupFns.push(() => {
+                stop();
+                prevBtn?.removeEventListener('click', onPrev);
+                nextBtn?.removeEventListener('click', onNext);
+                carouselEl.removeEventListener('mouseenter', stop);
+                carouselEl.removeEventListener('mouseleave', start);
+                carouselEl.removeEventListener('focusin', stop);
+                carouselEl.removeEventListener('focusout', start);
+            });
+        });
     }
 
 

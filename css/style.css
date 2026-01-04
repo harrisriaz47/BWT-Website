@@ -11,12 +11,63 @@
     --c-success: #10b981;
     --c-error: #ef4444;
     --radii: 12px;
+
+    /* Cards stay dark in both themes */
+    --card-surface-dark: rgba(23,23,23,0.68);
+    --card-border-dark: rgba(255,255,255,0.06);
+    --card-text-high-dark: #fafafa;
+    --card-text-mid-dark: #a1a1a1;
+    --card-text-low-dark: #525252;
     
     /* Typography */
     --font-display: 'Inter', system-ui, sans-serif;
     --font-body: 'Inter', system-ui, sans-serif;
     --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
     --font-body-size: 15px;
+
+    /* Card background image pool (professional, readable behind overlay) */
+    --card-bg-1: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-2: url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-3: url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-4: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-5: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-6: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-7: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-8: url('https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-9: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-10: url('https://images.unsplash.com/photo-1526378722484-bd91ca387e72?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-11: url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-12: url('https://images.unsplash.com/photo-1523952578875-e6bb18b26645?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-13: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-14: url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-15: url('https://images.unsplash.com/photo-1529336953128-a0f52f44f6b0?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-16: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-17: url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-18: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-19: url('https://images.unsplash.com/photo-1519241047957-be31d7379a5d?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-20: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-21: url('https://images.unsplash.com/photo-1522071901873-411886a10004?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-22: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-23: url('https://images.unsplash.com/photo-1516387938699-a93567ec168e?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-24: url('https://images.unsplash.com/photo-1526374870839-e155464bb9b2?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-25: url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-26: url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-27: url('https://images.unsplash.com/photo-1551033406-611cf9a28f73?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-28: url('https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-29: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-30: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-31: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-32: url('https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-33: url('https://images.unsplash.com/photo-1544198365-88fdbf0f9b36?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-34: url('https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-35: url('https://images.unsplash.com/photo-1542744095-291d1f67b221?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-36: url('https://images.unsplash.com/photo-1526378722484-bd91ca387e72?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-37: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-38: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-39: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-40: url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=1400&q=60');
+    --card-bg-pool-size: 40;
+    --card-bg-default: var(--card-bg-14);
 }
 
 body.light-mode {
@@ -25,8 +76,28 @@ body.light-mode {
     --c-border: rgba(0, 0, 0, 0.08);
     --c-text-high: #1f2937;
     --c-text-mid: #4b5563;
-    --c-text-low: #9ca3af;
+    --c-text-low: #6b7280;
     --c-primary: #8f0909;
+}
+
+/* Light mode: keep cards in dark theme for consistency */
+body.light-mode .card {
+    --c-text-high: var(--card-text-high-dark);
+    --c-text-mid: var(--card-text-mid-dark);
+    --c-text-low: var(--card-text-low-dark);
+    --c-border: var(--card-border-dark);
+    --c-surface: var(--card-surface-dark);
+
+    color: var(--c-text-mid);
+    border-color: var(--c-border);
+    /* Avoid light-page bleed-through that reads as a white glow */
+    background: linear-gradient(145deg, rgba(0,0,0,0.78), rgba(0,0,0,0.70));
+}
+
+/* Ensure Tailwind `text-white` remains readable inside dark cards while in light mode */
+body.light-mode .card .text-white,
+body.light-mode .card :is(h1,h2,h3,h4,h5,h6,strong).text-white {
+    color: var(--card-text-high-dark) !important;
 }
 
 /* Light mode: make headings/subheadings readable (keep home hero gradient untouched) */
@@ -61,7 +132,7 @@ body {
     font-family: var(--font-body);
     font-size: var(--font-body-size);
     color: var(--c-text-mid);
-    line-height: 1.6;
+    line-height: 1.65;
     -webkit-font-smoothing: antialiased;
 }
 .aurora {
@@ -90,12 +161,62 @@ body.light-mode .aurora {
 }
 .card {
     position: relative;
+    isolation: isolate;
+    overflow: hidden;
     background: linear-gradient(145deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
     border:1px solid var(--c-border);
     border-radius: var(--radii);
     padding:2rem;
     transition: all .2s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.card > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Card backgrounds are assigned per-page-load in JS to avoid repeating patterns in nested grids.
+   Cards that explicitly set `--card-bg` (inline) are never overridden. */
+
+/* Uniform background imagery on all cards (per-card overrides via `--card-bg`) */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image: var(--card-bg, var(--card-bg-default));
+    background-size: cover;
+    background-position: var(--card-bg-pos, center);
+    opacity: 0.22;
+    filter: saturate(110%) contrast(105%);
+    transform: scale(1.02);
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 20% 15%, rgba(0,0,0,0.25), transparent 55%),
+        linear-gradient(180deg, rgba(0,0,0,0.52), rgba(0,0,0,0.18));
+}
+
+/* Cards are dark in light mode: keep a dark overlay stack for readability */
+body.light-mode .card::before {
+    opacity: 0.18;
+    filter: saturate(112%) contrast(108%);
+}
+
+body.light-mode .card::after {
+    background:
+        radial-gradient(circle at 20% 15%, rgba(0,0,0,0.30), transparent 55%),
+        linear-gradient(180deg, rgba(0,0,0,0.60), rgba(0,0,0,0.22));
+}
+
+/* Note: existing HTML may still use `.card--bg`; it's now purely a marker class. */
 .card:hover {
     border-color: var(--c-primary);
     transform: translateY(-2px);
@@ -281,7 +402,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .section-lede {
     max-width:36rem;
     color:var(--c-text-mid);
-    line-height:1.6;
+    line-height:1.7;
 }
 
 .hero-grid {
@@ -303,6 +424,94 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     border-radius:var(--radii);
     padding:1.75rem;
     background:rgba(255,255,255,0.02);
+}
+
+/* Media (images) */
+.media-frame {
+    border: 1px solid var(--c-border);
+    border-radius: var(--radii);
+    overflow: hidden;
+    background: rgba(255,255,255,0.02);
+}
+
+.media-frame img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.media-caption {
+    padding: .85rem 1rem;
+    border-top: 1px solid var(--c-border);
+    font-size: .85rem;
+    color: var(--c-text-mid);
+}
+
+.hero-media {
+    aspect-ratio: 16 / 10;
+    min-height: 260px;
+}
+
+@media (max-width: 640px) {
+    .hero-media { min-height: 220px; }
+}
+
+.card-media {
+    aspect-ratio: 16 / 9;
+}
+
+/* Lightweight carousel (used for human + professional visuals) */
+.carousel {
+    position: relative;
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+
+.carousel-slide.is-active {
+    opacity: 1;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 999px;
+    border: 1px solid var(--c-border);
+    background: rgba(0,0,0,0.45);
+    color: var(--c-text-high);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+body.light-mode .carousel-btn {
+    background: rgba(255,255,255,0.6);
+}
+
+.carousel-btn:hover {
+    border-color: var(--c-primary);
+}
+
+.carousel-btn.prev { left: .75rem; }
+.carousel-btn.next { right: .75rem; }
+
+@media (prefers-reduced-motion: reduce) {
+    .carousel-slide { transition: none; }
 }
 .btn-secondary,
 .btn-outline {
